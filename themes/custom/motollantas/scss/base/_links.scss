@@ -1,0 +1,45 @@
+a, button {
+	color: color( controls, base );
+	text-decoration: none;
+	outline: 0;
+   transition: color .1s ease-out;
+
+   &.btn {
+      &:hover {
+         text-decoration: none;
+      }
+   }
+
+	&:hover, &:focus {
+      color: color( controls, dark );
+      text-decoration: underline;
+   }
+   
+   &.text-link {
+      font-family: $font-family-brand;
+      font-size: $font-size;
+      text-transform: uppercase;
+      border: none;
+      font-weight: 700;
+      line-height: 1;
+      outline: none;
+      background-color: transparent;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      cursor: pointer;
+      &.text-primary-base {
+         color: color( primary, base );
+         &:hover {
+            color: color( primary, dark );
+         }
+      }
+      &.text-secondary-base {
+         color: color( secondary, base );
+         &:hover {
+            color: color( secondary, dark );
+         }
+      }
+   }
+}

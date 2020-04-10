@@ -1,0 +1,65 @@
+.slick{
+    position: relative;
+}
+.slick__arrow{
+    .slick-next,
+    .slick-prev{
+        background: none;
+        border: 0;
+        font-size: 0;
+        height: 36px;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        width: 22px;
+        @include prefix(transform, translateY(-50%), webkit moz o ms);
+        &:before{
+            content: "+";
+            font-size: 20px;
+        }
+    }
+    .slick-prev{
+        left: 20px;
+    }
+    .slick-next{
+        right: 20px;
+    }
+}
+
+.slick-dots{
+    bottom: 41px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    li{
+        display: inline-block;
+        list-style: none;
+        button{
+            background: none;
+            border: 2px solid red;
+            border-radius: 100%;
+            display: inline-block;
+            height: 18px;
+            margin: 0 10px;
+            opacity: 1;
+            text-indent: -9999px;
+            width: 18px;
+            z-index: 99;
+        }
+        &.slick-active{
+            button{
+                background: color(primary, base);
+                border: 2px solid color(primary, base);
+            }
+        }
+    }
+}
+
+.slide__content{
+    img{
+        height: auto;
+        width: 100%;
+    }
+}

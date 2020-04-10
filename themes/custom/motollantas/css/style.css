@@ -1,0 +1,732 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+/* line 6, ../scss/config/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../scss/config/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+/* line 31, ../scss/config/_reset.scss */
+*[hidden] {
+  display: none;
+}
+
+/* line 34, ../scss/config/_reset.scss */
+body {
+  line-height: 1.5;
+}
+
+/* line 37, ../scss/config/_reset.scss */
+menu {
+  list-style: none;
+}
+
+/* line 40, ../scss/config/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 43, ../scss/config/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 48, ../scss/config/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 53, ../scss/config/_reset.scss */
+hr {
+  border-top: 1px solid #f2f2f2;
+}
+
+@font-face {
+  font-family: 'iconFont';
+  src: url("../fonts/iconFont.eot?f6rdj3");
+  src: url("../fonts/iconFont.eot?f6rdj3#iefix") format("embedded-opentype"), url("../fonts/iconFont.ttf?f6rdj3") format("truetype"), url("../fonts/iconFont.woff?f6rdj3") format("woff"), url("../fonts/iconFont.svg?f6rdj3#iconFont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* line 27, ../scss/config/_fonts.scss */
+[class^="ico-"], [class*=" ico-"] {
+  font-family: 'iconFont' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 2, ../scss/base/_body.scss */
+*,
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 6, ../scss/base/_body.scss */
+html {
+  height: 100%;
+}
+
+/* line 10, ../scss/base/_body.scss */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 17, ../scss/base/_body.scss */
+p {
+  margin-bottom: 1rem;
+}
+
+/* line 21, ../scss/base/_body.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* line 26, ../scss/base/_body.scss */
+h1 {
+  font-size: 4rem;
+}
+
+/* line 29, ../scss/base/_body.scss */
+h2 {
+  font-size: 3.5rem;
+}
+
+/* line 32, ../scss/base/_body.scss */
+h3 {
+  font-size: 3rem;
+}
+
+/* line 35, ../scss/base/_body.scss */
+h4 {
+  font-size: 2.25rem;
+}
+
+/* line 38, ../scss/base/_body.scss */
+h5 {
+  font-size: 1.5rem;
+}
+
+/* line 41, ../scss/base/_body.scss */
+h6 {
+  font-size: 1.25rem;
+}
+
+/* line 45, ../scss/base/_body.scss */
+ol,
+ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+/* line 51, ../scss/base/_body.scss */
+ol {
+  counter-reset: item;
+  list-style: none;
+}
+/* line 55, ../scss/base/_body.scss */
+ol li:before {
+  counter-increment: item;
+  content: counters(item,".") ". ";
+}
+
+@media (max-width: 599px) {
+  /* line 63, ../scss/base/_body.scss */
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  /* line 66, ../scss/base/_body.scss */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* line 69, ../scss/base/_body.scss */
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* line 72, ../scss/base/_body.scss */
+  h4 {
+    font-size: 1rem;
+  }
+
+  /* line 75, ../scss/base/_body.scss */
+  h5 {
+    font-size: 0.875rem;
+  }
+
+  /* line 78, ../scss/base/_body.scss */
+  h6 {
+    font-size: 0.75rem;
+  }
+}
+/* line 1, ../scss/base/_buttons.scss */
+.btn {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.75rem 1.9rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  /* line 1, ../scss/base/_buttons.scss */
+  .btn {
+    width: auto;
+  }
+}
+/* line 19, ../scss/base/_buttons.scss */
+.btn.btn-default {
+  background: #999;
+  color: #ffffff;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-default:hover {
+  background: #878787;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-default:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-default:active {
+  background: gray;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-default.disabled, .btn.btn-default:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-default.disabled:hover, .btn.btn-default:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-default.disabled:focus, .btn.btn-default:disabled:focus {
+  box-shadow: none;
+}
+/* line 21, ../scss/base/_buttons.scss */
+.btn.btn-default.outline {
+  background: transparent;
+  color: #999;
+  border: 0.13rem solid #999;
+  box-shadow: none;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover {
+  background: transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:active {
+  background: transparent;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-default.outline.disabled, .btn.btn-default.outline:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-default.outline.disabled:hover, .btn.btn-default.outline:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-default.outline.disabled:focus, .btn.btn-default.outline:disabled:focus {
+  box-shadow: none;
+}
+/* line 25, ../scss/base/_buttons.scss */
+.btn.btn-default.outline:hover, .btn.btn-default.outline:active {
+  background: #999;
+  color: #ffffff;
+  box-shadow: none;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover:hover, .btn.btn-default.outline:active:hover {
+  background: #878787;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover:focus, .btn.btn-default.outline:active:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover:active, .btn.btn-default.outline:active:active {
+  background: gray;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover.disabled, .btn.btn-default.outline:hover:disabled, .btn.btn-default.outline:active.disabled, .btn.btn-default.outline:active:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover.disabled:hover, .btn.btn-default.outline:hover:disabled:hover, .btn.btn-default.outline:active.disabled:hover, .btn.btn-default.outline:active:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-default.outline:hover.disabled:focus, .btn.btn-default.outline:hover:disabled:focus, .btn.btn-default.outline:active.disabled:focus, .btn.btn-default.outline:active:disabled:focus {
+  box-shadow: none;
+}
+/* line 31, ../scss/base/_buttons.scss */
+.btn.btn-success, .btn.btn-primary {
+  background: #666;
+  color: #ffffff;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-success:hover, .btn.btn-primary:hover {
+  background: #545454;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-success:focus, .btn.btn-primary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-success:active, .btn.btn-primary:active {
+  background: #4d4d4d;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-success.disabled, .btn.btn-success:disabled, .btn.btn-primary.disabled, .btn.btn-primary:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-success.disabled:hover, .btn.btn-success:disabled:hover, .btn.btn-primary.disabled:hover, .btn.btn-primary:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-success.disabled:focus, .btn.btn-success:disabled:focus, .btn.btn-primary.disabled:focus, .btn.btn-primary:disabled:focus {
+  box-shadow: none;
+}
+/* line 34, ../scss/base/_buttons.scss */
+.btn.btn-success.outline, .btn.btn-primary.outline {
+  background: transparent;
+  color: #666;
+  border: 0.15rem solid #666;
+  box-shadow: none;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover, .btn.btn-primary.outline:hover {
+  background: transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:focus, .btn.btn-primary.outline:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:active, .btn.btn-primary.outline:active {
+  background: transparent;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-success.outline.disabled, .btn.btn-success.outline:disabled, .btn.btn-primary.outline.disabled, .btn.btn-primary.outline:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-success.outline.disabled:hover, .btn.btn-success.outline:disabled:hover, .btn.btn-primary.outline.disabled:hover, .btn.btn-primary.outline:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-success.outline.disabled:focus, .btn.btn-success.outline:disabled:focus, .btn.btn-primary.outline.disabled:focus, .btn.btn-primary.outline:disabled:focus {
+  box-shadow: none;
+}
+/* line 38, ../scss/base/_buttons.scss */
+.btn.btn-success.outline:hover, .btn.btn-success.outline:active, .btn.btn-primary.outline:hover, .btn.btn-primary.outline:active {
+  background: #444;
+  color: #ffffff;
+}
+/* line 59, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover:hover, .btn.btn-success.outline:active:hover, .btn.btn-primary.outline:hover:hover, .btn.btn-primary.outline:active:hover {
+  background: #323232;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+/* line 64, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover:focus, .btn.btn-success.outline:active:focus, .btn.btn-primary.outline:hover:focus, .btn.btn-primary.outline:active:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgba(102, 102, 102, 0.25);
+  text-decoration: none;
+}
+/* line 69, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover:active, .btn.btn-success.outline:active:active, .btn.btn-primary.outline:hover:active, .btn.btn-primary.outline:active:active {
+  background: #2b2b2b;
+}
+/* line 72, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover.disabled, .btn.btn-success.outline:hover:disabled, .btn.btn-success.outline:active.disabled, .btn.btn-success.outline:active:disabled, .btn.btn-primary.outline:hover.disabled, .btn.btn-primary.outline:hover:disabled, .btn.btn-primary.outline:active.disabled, .btn.btn-primary.outline:active:disabled {
+  opacity: .55;
+  color: #666666;
+  background: #cccccc;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 79, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover.disabled:hover, .btn.btn-success.outline:hover:disabled:hover, .btn.btn-success.outline:active.disabled:hover, .btn.btn-success.outline:active:disabled:hover, .btn.btn-primary.outline:hover.disabled:hover, .btn.btn-primary.outline:hover:disabled:hover, .btn.btn-primary.outline:active.disabled:hover, .btn.btn-primary.outline:active:disabled:hover {
+  background: #cccccc;
+}
+/* line 82, ../scss/config/_mixins.scss */
+.btn.btn-success.outline:hover.disabled:focus, .btn.btn-success.outline:hover:disabled:focus, .btn.btn-success.outline:active.disabled:focus, .btn.btn-success.outline:active:disabled:focus, .btn.btn-primary.outline:hover.disabled:focus, .btn.btn-primary.outline:hover:disabled:focus, .btn.btn-primary.outline:active.disabled:focus, .btn.btn-primary.outline:active:disabled:focus {
+  box-shadow: none;
+}
+/* line 44, ../scss/base/_buttons.scss */
+.btn.btn-link {
+  box-shadow: none;
+}
+
+/* line 1, ../scss/base/_form.scss */
+form {
+  margin: 2.25rem auto;
+  max-width: 400px;
+}
+
+/* line 5, ../scss/base/_form.scss */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* line 8, ../scss/base/_form.scss */
+.form-control {
+  border: 1px solid #eeeeee;
+  box-shadow: none;
+}
+/* line 11, ../scss/base/_form.scss */
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(204, 204, 204, 0.6);
+}
+
+/* line 17, ../scss/base/_form.scss */
+.form-required:after {
+  content: "*";
+  background: none;
+  height: auto;
+  width: auto;
+}
+
+/* line 24, ../scss/base/_form.scss */
+input[type="radio"],
+input[type="checkbox"] {
+  border: 1px solid #666;
+  height: 14px;
+  width: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+/* line 30, ../scss/base/_form.scss */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+  background: url(../images/check.svg) no-repeat center #666;
+  background-size: 80%;
+}
+/* line 34, ../scss/base/_form.scss */
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  border-color: #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(204, 204, 204, 0.6);
+  outline: none;
+}
+
+/* line 41, ../scss/base/_form.scss */
+.select-wrapper:after {
+  color: #666;
+  font-size: 14px;
+}
+
+/* line 46, ../scss/base/_form.scss */
+.form-actions {
+  text-align: center;
+}
+
+/* line 1, ../scss/base/_links.scss */
+a, button {
+  color: #0074FC;
+  text-decoration: none;
+  outline: 0;
+  transition: color .1s ease-out;
+}
+/* line 8, ../scss/base/_links.scss */
+a.btn:hover, button.btn:hover {
+  text-decoration: none;
+}
+/* line 13, ../scss/base/_links.scss */
+a:hover, a:focus, button:hover, button:focus {
+  color: #0056B3;
+  text-decoration: underline;
+}
+/* line 18, ../scss/base/_links.scss */
+a.text-link, button.text-link {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 700;
+  line-height: 1;
+  outline: none;
+  background-color: transparent;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+/* line 32, ../scss/base/_links.scss */
+a.text-link.text-primary-base, button.text-link.text-primary-base {
+  color: #666;
+}
+/* line 34, ../scss/base/_links.scss */
+a.text-link.text-primary-base:hover, button.text-link.text-primary-base:hover {
+  color: #444;
+}
+/* line 38, ../scss/base/_links.scss */
+a.text-link.text-secondary-base, button.text-link.text-secondary-base {
+  color: #999;
+}
+/* line 40, ../scss/base/_links.scss */
+a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hover {
+  color: #222;
+}
+
+/* line 1, ../scss/base/_tabs.scss */
+.nav-tabs {
+  background: #f2f2f2;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 6, ../scss/base/_tabs.scss */
+.nav-tabs li {
+  flex: auto;
+  flex-basis: 33%;
+  float: none;
+  text-align: center;
+}
+/* line 12, ../scss/base/_tabs.scss */
+.nav-tabs li.active a {
+  background: #666;
+  border: 0;
+  border-radius: 0;
+  color: #ffffff;
+}
+/* line 17, ../scss/base/_tabs.scss */
+.nav-tabs li.active a:hover {
+  background: #666;
+  border: 0;
+  color: #ffffff;
+}
+/* line 24, ../scss/base/_tabs.scss */
+.nav-tabs li a {
+  height: 100%;
+}
+/* line 26, ../scss/base/_tabs.scss */
+.nav-tabs li a:hover {
+  border-color: transparent;
+}
+
+/* line 1, ../scss/base/_slide.scss */
+.slick {
+  position: relative;
+}
+
+/* line 5, ../scss/base/_slide.scss */
+.slick__arrow .slick-next,
+.slick__arrow .slick-prev {
+  background: none;
+  border: 0;
+  font-size: 0;
+  height: 36px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* line 16, ../scss/base/_slide.scss */
+.slick__arrow .slick-next:before,
+.slick__arrow .slick-prev:before {
+  content: "+";
+  font-size: 20px;
+}
+/* line 21, ../scss/base/_slide.scss */
+.slick__arrow .slick-prev {
+  left: 20px;
+}
+/* line 24, ../scss/base/_slide.scss */
+.slick__arrow .slick-next {
+  right: 20px;
+}
+
+/* line 29, ../scss/base/_slide.scss */
+.slick-dots {
+  bottom: 41px;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 36, ../scss/base/_slide.scss */
+.slick-dots li {
+  display: inline-block;
+  list-style: none;
+}
+/* line 39, ../scss/base/_slide.scss */
+.slick-dots li button {
+  background: none;
+  border: 2px solid red;
+  border-radius: 100%;
+  display: inline-block;
+  height: 18px;
+  margin: 0 10px;
+  opacity: 1;
+  text-indent: -9999px;
+  width: 18px;
+  z-index: 99;
+}
+/* line 52, ../scss/base/_slide.scss */
+.slick-dots li.slick-active button {
+  background: #666;
+  border: 2px solid #666;
+}
+
+/* line 61, ../scss/base/_slide.scss */
+.slide__content img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 1, ../scss/components/_header.scss */
+.navbar-default {
+  background: #f2f2f2;
+  border: 0;
+  border-radius: 0;
+}
+/* line 5, ../scss/components/_header.scss */
+.navbar-default.container {
+  max-width: 100%;
+  width: 100%;
+}
+/* line 9, ../scss/components/_header.scss */
+.navbar-default .navbar-collapse {
+  margin: 0;
+  padding: 0;
+}
+/* line 13, ../scss/components/_header.scss */
+.navbar-default .navbar-nav {
+  margin: 0;
+}
+/* line 16, ../scss/components/_header.scss */
+.navbar-default .navbar-nav li a {
+  color: #0074FC;
+}
+
+/* line 24, ../scss/components/_header.scss */
+.menu li {
+  display: inline-block;
+}
+/* line 26, ../scss/components/_header.scss */
+.menu li a {
+  color: #0074FC;
+}
+/* line 28, ../scss/components/_header.scss */
+.menu li a:hover, .menu li a:focus {
+  background: none;
+}
+
+@media (min-width: 600px) {
+  /* line 38, ../scss/components/_header.scss */
+  .menu li {
+    display: block;
+  }
+}
+/* line 1, ../scss/components/_footer.scss */
+.footer {
+  background: #f2f2f2;
+  border: 0;
+  margin-top: 1.5rem;
+  padding: 10px 0;
+}

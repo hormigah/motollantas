@@ -1,0 +1,31 @@
+.nav-tabs{
+    background: color(grayscale, gray-1);
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    li{
+        flex: auto;
+        flex-basis: 33%;
+        float: none;
+        text-align: center;
+        &.active{
+            a{
+                background: color(primary, base);
+                border: 0;
+                border-radius: 0;
+                color: color(grayscale, white);
+                &:hover{
+                    background: color(primary, base);
+                    border: 0;
+                    color: color(grayscale, white);
+                }
+            }
+        }
+        a{
+            height: 100%;
+            &:hover{
+                border-color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+
+*, 
+*:before, *:after {
+	box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-brand;
+  font-size: $font-size;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin-bottom: map-get($sizes, "base");
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: bold;
+  margin-bottom: map-get($sizes, "base");
+}
+
+h1{
+  font-size: map-get($sizes, "huge");
+}
+h2{
+  font-size: map-get($sizes, "xlarge");
+}
+h3{
+  font-size: map-get($sizes, "large");
+}
+h4{
+  font-size: map-get($sizes, "medium");
+}
+h5{
+  font-size: map-get($sizes, "half");
+}
+h6{
+  font-size: map-get($sizes, "thumb");
+}
+
+ol,
+ul{
+  margin-bottom: map-get($sizes, "base");
+  padding-left: map-get($sizes, "half");
+}
+
+ol{
+  counter-reset: item;
+  list-style: none;
+  li{
+    &:before{
+      counter-increment: item;
+      content: counters(item, ".") ". ";
+    }
+  }
+}
+
+@include mq-max(sm){
+  h1{
+    font-size: map-get($sizes, "medium");
+  }
+  h2{
+    font-size: map-get($sizes, "half");
+  }
+  h3{
+    font-size: map-get($sizes, "thumb");
+  }
+  h4{
+    font-size: map-get($sizes, "base");
+  }
+  h5{
+    font-size: map-get($sizes, "small");
+  }
+  h6{
+    font-size: map-get($sizes, "tiny");
+  }
+}

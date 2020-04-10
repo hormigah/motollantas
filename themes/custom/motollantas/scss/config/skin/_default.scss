@@ -1,0 +1,53 @@
+// ==========================================================================
+// External Source Definitions 
+// ==========================================================================
+
+$fontFamilyBrand    : 'Roboto Condensed', sans-serif;
+$fontPrimary        : 'Roboto', sans-serif;
+$fontSecondary      : 'Open Sans', sans-serif;
+
+
+// ==========================================================================
+// Definitions color
+// ==========================================================================
+
+// Primary Colors
+$primaryBase        : #666 !default;
+$primaryLight       : #ccc !default;
+$primaryDark        : #444 !default;
+
+// Secondary colors
+$secondaryBase      : #999 !default;
+$secondaryLight     : #ddd !default;
+$secondaryDark      : #222 !default;
+
+// Complementary Colors
+$complementaryOne   : #9BE9BA !default;
+$complementaryTwo   : #a28e4d !default;
+$complementaryThree : #f4f2ee !default;
+
+// Alerts Colors
+$alertsSuccess      : #28A745 !default;
+$alertsError        : #DC3545 !default;
+$alertsWarning      : #FFC100 !default;
+$alertsInfo         : #0074FC !default;
+
+// Controls Colors
+$control01          : #0074FC !default;
+$control01-dark     : #0056B3 !default;
+
+// GrayScale Colors
+$grayscaleWhite    : #ffffff !default;
+$grayscaleLevel-1  : #f2f2f2 !default; 
+$grayscaleLevel-2  : #eeeeee !default;
+$grayscaleLevel-3  : #cccccc !default;
+$grayscaleLevel-4  : #999999 !default;
+$grayscaleLevel-5  : #666666 !default;
+$grayscaleLevel-6  : #333333 !default;
+$grayscaleLevel-7  : #4A4A4A !default; 
+$grayscaleBase     : #1b1b1b !default;
+$grayscaleBlack    : #000000 !default;
+
+// Border Colors
+$borderColor-1     : #ced4da !default;
+$borderColor-2     : #999999 !default;
