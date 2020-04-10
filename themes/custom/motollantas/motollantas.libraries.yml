@@ -3,7 +3,7 @@ framework:
     theme:
       css/style.css: {}
   js:
-    js/nivelics.js: {}
+    js/motollantas.js: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

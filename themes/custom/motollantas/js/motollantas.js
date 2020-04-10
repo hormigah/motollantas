@@ -1,12 +1,12 @@
 /**
  * @file
- * Defines Javascript behaviors for the Nivelics Theme.
+ * Defines Javascript behaviors for the Motollantas Theme.
  */
 
 (function ($, Drupal, drupalSettings) {
   'use strict';
 
-  Drupal.behaviors.NivelicsTheme = {
+  Drupal.behaviors.MotollantasTheme = {
     attach: function (context) {
       
     }
