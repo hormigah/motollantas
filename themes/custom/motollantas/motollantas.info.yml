@@ -17,7 +17,9 @@ regions:
   sidebar_second: 'Secondary'
   pre_footer: 'Pre footer'
   footer: 'Footer'
+  footer_bottom: 'Footer Bottom'
 
 libraries-extend:
   bootstrap/framework:
     - motollantas/framework
+    - motollantas/fonts

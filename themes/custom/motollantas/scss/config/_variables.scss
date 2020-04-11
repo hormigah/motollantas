@@ -53,8 +53,13 @@ $colors: (
       black    : $grayscaleBlack 
    ),
    border:(
-      color-1  : $borderColor-1,
-      color-2  : $borderColor-2,
+    color-1  : $borderColor-1,
+    color-2  : $borderColor-2,
+   ),
+   background:(
+    color-1  : $backgroundColor-1,
+    color-2  : $backgroundColor-2,
+    color-3  : $backgroundColor-3,
    )
 );
 

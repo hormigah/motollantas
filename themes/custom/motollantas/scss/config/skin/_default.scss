@@ -2,9 +2,10 @@
 // External Source Definitions 
 // ==========================================================================
 
-$fontFamilyBrand    : 'Roboto Condensed', sans-serif;
-$fontPrimary        : 'Roboto', sans-serif;
-$fontSecondary      : 'Open Sans', sans-serif;
+$fontFamilyBrand      : 'Roboto Condensed', sans-serif;
+$fontPrimary          : 'Roboto', sans-serif;
+$fontSecondary        : 'Open Sans', sans-serif;
+$fontShadowsIntoLight : 'Shadows Into Light', sans-serif;
 
 
 // ==========================================================================
@@ -49,5 +50,11 @@ $grayscaleBase     : #1b1b1b !default;
 $grayscaleBlack    : #000000 !default;
 
 // Border Colors
-$borderColor-1     : #ced4da !default;
-$borderColor-2     : #999999 !default;
+$borderColor-1     : #646464 !default;
+$borderColor-2     : #475b6f !default;
+
+
+// Background Colors
+$backgroundColor-1 : #121214 !default;
+$backgroundColor-2 : #0c0c0c !default;
+$backgroundColor-3 : #65829d !default;
