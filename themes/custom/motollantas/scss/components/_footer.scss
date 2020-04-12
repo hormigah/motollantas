@@ -1,7 +1,9 @@
-.footer{
+.footer {
   background: color(background, color-1);
   margin-top: map-get($sizes, half );
   padding: 10px 0 0;
+  color: color(background, color-4);
+  font-size: map-get($sizes, small );
   .footer-ribbon {
     background: color(background, color-3);
     position: absolute;
@@ -35,6 +37,17 @@
       margin-bottom: 18px;
       color: color(grayscale, white);
     }
+    .menu--footer {
+      li {
+        padding: map-get($sizes, skinny ) 0 0;
+        &:before {
+          color: color(background, color-3);
+          content: "\f0da";
+          display: inline-block;
+          font: normal normal normal 12px/1 FontAwesome;
+        }
+      }
+    }
   }
   .footer-bottom {
     color: #777;
@@ -42,5 +55,18 @@
     border-top: none;
     padding: 29.5px 0;
     margin-top: 20px;
+  }
+  .nav {
+    > li {
+      > a {
+        font-size: map-get($sizes, small );
+        color: color(grayscale, white);
+        display: inline;
+        padding: 3px;
+      }
+    }
+  }
+  a {
+    color: color(grayscale, white);
   }
 }

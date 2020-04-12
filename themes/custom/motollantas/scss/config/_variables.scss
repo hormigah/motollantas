@@ -60,6 +60,7 @@ $colors: (
     color-1  : $backgroundColor-1,
     color-2  : $backgroundColor-2,
     color-3  : $backgroundColor-3,
+    color-4  : $backgroundColor-4,
    )
 );
 
@@ -68,6 +69,7 @@ $colors: (
 // ==========================================================================
 
 $sizes: (
+   skinny : .625rem,  // 10px
    tiny   : .75rem,  // 12px
    small  : .875rem, // 14px
    base   : 1rem,    // 16px

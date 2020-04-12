@@ -9,6 +9,7 @@ fonts:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light': { type: external, minified: true }
+      vendor/font-awesome/css/font-awesome.min.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

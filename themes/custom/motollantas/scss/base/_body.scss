@@ -58,6 +58,23 @@ ol{
     }
   }
 }
+/* Estilos del sitio */
+.paragraph--type--mail-information {
+  &:before {
+    content: "\f003";
+    font: normal normal normal 12px/1 FontAwesome;
+    font-size: map-get($sizes, small );
+    display: inline-block;
+    margin-right: 3px;
+  }
+  .field--name-field-title {
+    display: inline;
+    font-weight: 700;
+  }
+  .field--name-field-mail {
+    margin-left: map-get($sizes, "half");
+  }
+}
 
 @include mq-max(sm){
   h1{
