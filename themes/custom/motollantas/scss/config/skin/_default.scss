@@ -13,7 +13,7 @@ $fontShadowsIntoLight : 'Shadows Into Light', sans-serif;
 // ==========================================================================
 
 // Primary Colors
-$primaryBase        : #666 !default;
+$primaryBase        : #777 !default;
 $primaryLight       : #ccc !default;
 $primaryDark        : #444 !default;
 
@@ -29,7 +29,7 @@ $complementaryThree : #f4f2ee !default;
 
 // Alerts Colors
 $alertsSuccess      : #28A745 !default;
-$alertsError        : #DC3545 !default;
+$alertsError        : #f00000 !default;
 $alertsWarning      : #FFC100 !default;
 $alertsInfo         : #0074FC !default;
 
@@ -52,7 +52,6 @@ $grayscaleBlack    : #000000 !default;
 // Border Colors
 $borderColor-1     : #646464 !default;
 $borderColor-2     : #475b6f !default;
-
 
 // Background Colors
 $backgroundColor-1 : #121214 !default;

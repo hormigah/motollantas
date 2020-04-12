@@ -1,25 +1,45 @@
-form{
-    margin: map-get($sizes, medium) auto;
-    max-width: 400px;
+form {
+  font-size: map-get($sizes, small );
+  label {
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+  .form-required{
+    &:after {
+      content: "*";
+      background: none;
+      height: auto;
+      width: auto;
+      color: color(alerts, error);
+      margin: 0 0.3em;
+    }
+  }
+  .form-email, .form-text, form-textarea {
+    border: 1px solid color(grayscale, gray-3);
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  }
+  .form-control {
+    border: 1px solid color(grayscale, gray-3);
+    box-shadow: none;
+    &:focus{
+      border-color: color(primary, light);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(color(primary, light), .6);
+    }
+  }
+  .form-actions {
+    .btn-primary {
+      background-color: color(background, color-3);
+      border-color: color(background, color-3) color(background, color-3) color(background, color-3);
+    }
+  }
 }
 .form-group{
     margin-bottom: map-get($sizes, base);
-}
-.form-control{
-    border: 1px solid color(grayscale, gray-2);
-    box-shadow: none;
-    &:focus{
-        border-color: color(primary, light);
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(color(primary, light), .6);
-    }
-}
-.form-required{
-    &:after{
-        content: "*";
-        background: none;
-        height: auto;
-        width: auto;
-    }
 }
 input[type="radio"], 
 input[type="checkbox"]{
@@ -42,7 +62,4 @@ input[type="checkbox"]{
         color: color(primary, base);
         font-size: 14px;
     }
-}
-.form-actions{
-    text-align: center;
 }

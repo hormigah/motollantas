@@ -12,6 +12,7 @@ body {
   font-size: $font-size;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  color: color(primary, base);
 }
 
 p {
