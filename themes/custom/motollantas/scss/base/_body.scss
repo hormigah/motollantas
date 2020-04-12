@@ -106,6 +106,12 @@ ol{
     margin-left: map-get($sizes, "thumb");
   }
 }
+.field--name-field-location {
+  padding: 0 !important;
+  width: 100vw;
+  margin-left: 50% !important;
+  transform: translateX(-50vw);
+}
 
 @include mq-max(sm){
   h1{
