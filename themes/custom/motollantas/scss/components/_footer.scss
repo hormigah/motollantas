@@ -40,6 +40,9 @@
     .menu--footer {
       li {
         padding: map-get($sizes, skinny ) 0 0;
+        &:first-child {
+          padding: 0;
+        }
         &:before {
           color: color(background, color-3);
           content: "\f0da";
@@ -53,8 +56,14 @@
     color: #777;
     background-color: color(background, color-2);
     border-top: none;
-    padding: 29.5px 0;
+    padding: map-get($sizes, base ) 0;
     margin-top: 20px;
+    .logo {
+      margin: 0;
+    }
+    .navbar-brand {
+      padding: 7px 15px;
+    }
   }
   .nav {
     > li {

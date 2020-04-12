@@ -902,6 +902,11 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
 }
 
 /* line 43, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+.footer .region-footer .menu--footer li:first-child {
+  padding: 0;
+}
+
+/* line 46, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer .region-footer .menu--footer li:before {
   color: #65829d;
   content: "\f0da";
@@ -909,16 +914,26 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   font: normal normal normal 12px/1 FontAwesome;
 }
 
-/* line 52, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+/* line 55, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer .footer-bottom {
   color: #777;
   background-color: #0c0c0c;
   border-top: none;
-  padding: 29.5px 0;
+  padding: 1rem 0;
   margin-top: 20px;
 }
 
 /* line 61, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+.footer .footer-bottom .logo {
+  margin: 0;
+}
+
+/* line 64, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+.footer .footer-bottom .navbar-brand {
+  padding: 7px 15px;
+}
+
+/* line 70, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer .nav > li > a {
   font-size: 0.875rem;
   color: #ffffff;
@@ -926,7 +941,7 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   padding: 3px;
 }
 
-/* line 69, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+/* line 78, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer a {
   color: #ffffff;
 }
