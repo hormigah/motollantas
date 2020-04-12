@@ -59,20 +59,50 @@ ol{
   }
 }
 /* Estilos del sitio */
+.field--name-field-contact-information {
+  .paragraph {
+    &:before {
+      font: normal normal normal 12px/1 FontAwesome;
+      font-size: map-get($sizes, small );
+      display: inline-block;
+      margin-right: 3px;
+    }
+    .field--name-field-title {
+      display: inline;
+      font-weight: 700;
+    }
+  }
+}
 .paragraph--type--mail-information {
   &:before {
-    content: "\f003";
-    font: normal normal normal 12px/1 FontAwesome;
-    font-size: map-get($sizes, small );
-    display: inline-block;
-    margin-right: 3px;
-  }
-  .field--name-field-title {
-    display: inline;
-    font-weight: 700;
+    content: "\f003";    
   }
   .field--name-field-mail {
     margin-left: map-get($sizes, "half");
+  }
+}
+.paragraph--type--location-information {
+  &:before {
+    content: "\f041";
+  }
+  .field--name-field-information {
+    margin-left: map-get($sizes, "thumb");
+  }
+}
+.paragraph--type--phone-information {
+  &:before {
+    content: "\f095";
+  }
+  .field--name-field-phone {
+    margin-left: map-get($sizes, "thumb");
+  }
+}
+.paragraph--type--contact-information {
+  &:before {
+    content: "\f017";
+  }
+  .field--name-field-information {
+    margin-left: map-get($sizes, "thumb");
   }
 }
 
