@@ -29,6 +29,12 @@
   }
   .region-footer {
     margin-top: 40px;
+    h2 {
+      font-size: map-get($sizes, base );
+      font-weight: 400;
+      margin-bottom: 18px;
+      color: color(grayscale, white);
+    }
   }
   .footer-bottom {
     color: #777;
