@@ -302,7 +302,6 @@ ol li:before {
   margin-bottom: 1rem;
   outline: none;
   padding: 0.75rem 1.9rem;
-  text-transform: uppercase;
   width: 100%;
 }
 
@@ -313,7 +312,7 @@ ol li:before {
   }
 }
 
-/* line 19, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 18, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-default {
   background: #999;
   color: #ffffff;
@@ -357,7 +356,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 21, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 20, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-default.outline {
   background: transparent;
   color: #999;
@@ -403,7 +402,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 25, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 24, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-default.outline:hover, .btn.btn-default.outline:active {
   background: #999;
   color: #ffffff;
@@ -448,7 +447,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 31, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 30, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-success, .btn.btn-primary {
   background: #777;
   color: #ffffff;
@@ -492,7 +491,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 34, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 33, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-success.outline, .btn.btn-primary.outline {
   background: transparent;
   color: #777;
@@ -538,7 +537,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 38, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 37, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-success.outline:hover, .btn.btn-success.outline:active, .btn.btn-primary.outline:hover, .btn.btn-primary.outline:active {
   background: #444;
   color: #ffffff;
@@ -582,7 +581,7 @@ ol li:before {
   box-shadow: none;
 }
 
-/* line 44, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
+/* line 43, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
 .btn.btn-link {
   box-shadow: none;
 }
