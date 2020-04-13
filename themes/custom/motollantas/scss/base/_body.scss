@@ -60,6 +60,9 @@ ol{
   }
 }
 /* Estilos del sitio */
+.main-container {
+  font-size: map-get($sizes, small );
+}
 .field--name-field-contact-information {
   .paragraph {
     &:before {
@@ -111,6 +114,29 @@ ol{
   width: 100vw;
   margin-left: 50% !important;
   transform: translateX(-50vw);
+}
+.node--type-webform {
+  .field--label {
+    font-size: map-get($sizes, "half");
+    margin: map-get($sizes, "large") 0 map-get($sizes, "medium") 0;
+    font-weight: 300;
+  }
+  .field--name-field-contact-information {
+    .paragraph {
+      margin-bottom: map-get($sizes, "base");
+      &:before {
+        width: map-get($sizes, "large");
+        height: map-get($sizes, "large");
+        text-align: center;
+        background-color: color(background, color-3);
+        line-height: map-get($sizes, "large");
+        font-size: map-get($sizes, "thumb");
+        color: color(grayscale, white);
+        float: left;
+        margin-right: map-get($sizes, "tiny");
+      }
+    }
+  }
 }
 
 @include mq-max(sm){
