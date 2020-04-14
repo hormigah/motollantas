@@ -59,10 +59,14 @@
     padding: map-get($sizes, base ) 0;
     margin-top: 20px;
     .logo {
-      margin: 0;
+      margin: 0 map-get($sizes, medium ) 0 0;
     }
     .navbar-brand {
       padding: 7px 15px;
+    }
+    .block {
+      margin-right: map-get($sizes, medium );
+      float: left;
     }
   }
   .nav {

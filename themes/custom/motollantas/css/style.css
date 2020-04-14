@@ -979,7 +979,7 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
 
 /* line 61, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer .footer-bottom .logo {
-  margin: 0;
+  margin: 0 2.25rem 0 0;
 }
 
 /* line 64, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
@@ -987,7 +987,13 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   padding: 7px 15px;
 }
 
-/* line 70, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+/* line 67, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+.footer .footer-bottom .block {
+  margin-right: 2.25rem;
+  float: left;
+}
+
+/* line 74, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer .nav > li > a {
   font-size: 0.875rem;
   color: #ffffff;
@@ -995,7 +1001,7 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   padding: 3px;
 }
 
-/* line 78, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
+/* line 82, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_footer.scss */
 .footer a {
   color: #ffffff;
 }
