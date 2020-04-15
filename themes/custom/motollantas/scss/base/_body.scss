@@ -139,14 +139,12 @@ ol{
   }
 }
 .view-social-networks {
-  .view-content {
-    div {
-      display: inline-block;
-      border-radius: 100%;
-      a {
-        background-color: color(background, color-5);
-        color: color(grayscale, white);
-      }
+  .social-network {
+    display: inline-block;
+    border-radius: 100%;
+    a {
+      background-color: color(background, color-5);
+      color: color(grayscale, white);
     }
   }
 }
