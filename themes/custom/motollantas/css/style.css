@@ -276,9 +276,9 @@ ol li:before {
   transition: all 0.2s ease;
   border-radius: 100%;
   display: block;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  width: 1.5rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  width: 2.25rem;
   text-align: center;
   text-decoration: none;
 }
