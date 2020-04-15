@@ -138,6 +138,18 @@ ol{
     }
   }
 }
+.view-social-networks {
+  .view-content {
+    li {
+      display: inline-block;
+      border-radius: 100%;
+      a {
+        background-color: color(background, color-5);
+        color: color(grayscale, white);
+      }
+    }
+  }
+}
 
 @include mq-max(sm){
   h1{
