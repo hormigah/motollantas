@@ -144,7 +144,15 @@ ol{
     border-radius: 100%;
     a {
       background-color: color(background, color-5);
-      color: color(grayscale, white);
+      color: color(grayscale, white);      
+      transition: all 0.2s ease;
+      border-radius: 100%;
+      display: block;
+      height: map-get($sizes, "half");
+      line-height: map-get($sizes, "half");
+      width: map-get($sizes, "half");
+      text-align: center;
+      text-decoration: none;
     }
   }
 }
