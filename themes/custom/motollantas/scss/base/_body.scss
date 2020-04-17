@@ -190,6 +190,35 @@ ol{
     }
   }
 }
+.block-facets {
+  margin-top: map-get($sizes, "base");
+  .block-title {
+    margin: 0;
+    font-size: map-get($sizes, "small");
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid color(secondary, light);
+    background-color: color(background, color-6);
+    padding: map-get($sizes, "tiny") map-get($sizes, "skinny");
+  }
+  .facets-widget-links {
+    padding: map-get($sizes, "skinny") map-get($sizes, "skinny") 0;
+    border: 1px solid color(secondary, light);
+    border-top: none;
+    border-radius: 0 0 0 0;
+    background-color: color(background, color-7);
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+        a {
+          color: color(primary, base);
+          line-height: 2;
+        }
+      }
+    }
+  }
+}
 
 @include mq-max(sm){
   h1{
