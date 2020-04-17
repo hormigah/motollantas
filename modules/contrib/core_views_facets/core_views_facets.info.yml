@@ -1,0 +1,15 @@
+name: Core Views Facets
+type: module
+description: Facet support for generic views
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Search
+dependencies:
+  - facets:facets
+  - drupal:views
+  - drupal:system (>=8.2)
+
+# Information added by Drupal.org packaging script on 2020-01-16
+version: '8.x-1.1'
+project: 'core_views_facets'
+datestamp: 1579199587
