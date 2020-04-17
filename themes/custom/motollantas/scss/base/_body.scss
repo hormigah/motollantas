@@ -156,6 +156,40 @@ ol{
     }
   }
 }
+.view-products {
+  .views-row {
+    text-align: center;
+   .views-field-title {
+      font-weight: 400;
+      font-size: map-get($sizes, "base");
+      margin: 0 0 3px;
+      a {
+        color: color(background, color-4);
+      } 
+    }
+    .views-field-field-fivestar {
+      line-height: 1.25;
+      background: url(../images/rating-bar.png) center no-repeat;
+      margin: 7px 0 6px;
+      form {
+        display: inline-block;
+        position: relative;
+      }
+    }
+    .views-field-price__number {
+      font-size: map-get($sizes, "thumb");
+      color: color(primary, dark);
+      font-weight: 600;
+    }
+  } 
+}
+.has-glyphicons {
+  .select-wrapper {
+    &:after {
+      display: none; 
+    }
+  }
+}
 
 @include mq-max(sm){
   h1{
