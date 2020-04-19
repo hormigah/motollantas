@@ -21,5 +21,6 @@ regions:
 
 libraries-extend:
   bootstrap/framework:
+    - motollantas/slick
     - motollantas/framework
     - motollantas/fonts

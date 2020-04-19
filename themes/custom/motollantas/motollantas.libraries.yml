@@ -1,9 +1,16 @@
+slick:
+  css:
+    theme:
+    '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css': { type: external, minified: true }
+    '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css': { type: external, minified: true }
+  js:
+    '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js': { type: external, minified: true }
+  
 framework:
   css:
     theme:
       css/style.css: {}
   js:
-    js/slick.min.js: {}
     js/motollantas.js: {}
 
 fonts:
