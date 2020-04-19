@@ -924,44 +924,29 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   border-color: transparent;
 }
 
-/* line 1, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick {
-  position: relative;
+/* line 2, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-next, .slick-slider .slick-prev {
+  z-index: 999;
 }
 
-/* line 5, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick__arrow .slick-next,
-.slick__arrow .slick-prev {
-  background: none;
-  border: 0;
-  font-size: 0;
-  height: 36px;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  width: 22px;
-  transform: translateY(-50%);
+/* line 4, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-next:before, .slick-slider .slick-prev:before {
+  font-size: 35px;
+  color: #000000;
 }
 
-/* line 16, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick__arrow .slick-next:before,
-.slick__arrow .slick-prev:before {
-  content: "+";
-  font-size: 20px;
-}
-
-/* line 21, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick__arrow .slick-prev {
+/* line 9, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-prev {
   left: 20px;
 }
 
-/* line 24, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick__arrow .slick-next {
+/* line 12, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-next {
   right: 20px;
 }
 
-/* line 29, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick-dots {
+/* line 15, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-dots {
   bottom: 41px;
   left: 0;
   padding: 0;
@@ -970,36 +955,27 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   width: 100%;
 }
 
-/* line 36, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick-dots li {
+/* line 22, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-dots li {
   display: inline-block;
   list-style: none;
 }
 
-/* line 39, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick-dots li button {
-  background: none;
-  border: 2px solid red;
+/* line 25, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-dots li button {
+  background: #000000;
   border-radius: 100%;
   display: inline-block;
-  height: 18px;
-  margin: 0 10px;
+  height: 14px;
   opacity: 1;
   text-indent: -9999px;
-  width: 18px;
+  width: 14px;
   z-index: 99;
 }
 
-/* line 52, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slick-dots li.slick-active button {
-  background: #777;
-  border: 2px solid #777;
-}
-
-/* line 61, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
-.slide__content img {
-  height: auto;
-  width: 100%;
+/* line 36, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-slider .slick-dots li.slick-active button {
+  background: #999999;
 }
 
 /* line 1, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
