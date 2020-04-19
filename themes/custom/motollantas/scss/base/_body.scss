@@ -219,6 +219,47 @@ ol{
     }
   }
 }
+.views-exposed-form {
+  h2 {
+    margin: 0;
+    font-size: map-get($sizes, "small");
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid color(secondary, light);
+    background-color: color(background, color-6);
+    padding: map-get($sizes, "tiny") map-get($sizes, "skinny");
+  }
+  form {
+    padding: map-get($sizes, "skinny") map-get($sizes, "skinny") 0;
+    border: 1px solid color(secondary, light);
+    border-top: none;
+    border-radius: 0 0 0 0;
+    background-color: color(background, color-7);
+    .form-item {
+      margin-bottom: map-get($sizes, "skinny");
+      width: 100%;
+      &:first-child, &:nth-child(2) {
+        display: none;
+      }
+      label {
+        width: 35%;
+      }
+      .select-wrapper {
+        width: 60%;
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .form-actions {
+      display: block;
+      text-align: center;
+      .form-submit {
+        margin: map-get($sizes, "skinny") 0;
+      }
+    }
+  }
+}
 
 @include mq-max(sm){
   h1{
