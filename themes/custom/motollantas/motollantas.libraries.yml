@@ -3,6 +3,7 @@ framework:
     theme:
       css/style.css: {}
   js:
+    js/slick.min.js: {}
     js/motollantas.js: {}
 
 fonts:

@@ -379,7 +379,7 @@ ol li:before {
 
 /* line 232, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form {
-  padding: 0.625rem 0.625rem 0;
+  padding: 0.875rem 0.875rem 0;
   border: 1px solid #ddd;
   border-top: none;
   border-radius: 0 0 0 0;
@@ -388,7 +388,7 @@ ol li:before {
 
 /* line 238, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-item {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.875rem;
   width: 100%;
 }
 
