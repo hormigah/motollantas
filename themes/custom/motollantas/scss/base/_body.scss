@@ -261,6 +261,15 @@ ol{
     }
   }
 }
+.product-addtocart {
+  .btn {
+    &.btn-primary {
+      color: color(grayscale, white);      
+      background-color: color(background, color-3);
+      border-color: color(background, color-3) color(background, color-3) color(background, color-3);
+    }
+  }
+}
 .commerce-cart-block {
   .commerce-cart-block--link {
     position: relative;
