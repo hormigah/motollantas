@@ -172,11 +172,16 @@ ol li:before {
 
 /* Estilos del sitio */
 /* line 63, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.name.navbar-brand {
+  display: none;
+}
+
+/* line 66, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .main-container {
   font-size: 0.875rem;
 }
 
-/* line 68, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 71, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .field--name-field-contact-information .paragraph:before {
   font: normal normal normal 12px/1 FontAwesome;
   font-size: 0.875rem;
@@ -184,53 +189,53 @@ ol li:before {
   margin-right: 3px;
 }
 
-/* line 74, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 77, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .field--name-field-contact-information .paragraph .field--name-field-title {
   display: inline;
   font-weight: 700;
 }
 
-/* line 81, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 84, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--mail-information:before {
   content: "\f003";
 }
 
-/* line 84, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 87, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--mail-information .field--name-field-mail {
   margin-left: 1.5rem;
 }
 
-/* line 89, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 92, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--location-information:before {
   content: "\f041";
 }
 
-/* line 92, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 95, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--location-information .field--name-field-information {
   margin-left: 1.25rem;
 }
 
-/* line 97, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 100, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--phone-information:before {
   content: "\f095";
 }
 
-/* line 100, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 103, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--phone-information .field--name-field-phone {
   margin-left: 1.25rem;
 }
 
-/* line 105, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 108, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--contact-information:before {
   content: "\f017";
 }
 
-/* line 108, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 111, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .paragraph--type--contact-information .field--name-field-information {
   margin-left: 1.25rem;
 }
 
-/* line 112, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 115, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .field--name-field-location {
   padding: 0 !important;
   width: 100vw;
@@ -238,19 +243,19 @@ ol li:before {
   transform: translateX(-50vw);
 }
 
-/* line 119, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 122, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-webform .field--label {
   font-size: 1.5rem;
   margin: 3rem 0 2.25rem 0;
   font-weight: 300;
 }
 
-/* line 125, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 128, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-webform .field--name-field-contact-information .paragraph {
   margin-bottom: 1rem;
 }
 
-/* line 127, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 130, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-webform .field--name-field-contact-information .paragraph:before {
   width: 3rem;
   height: 3rem;
@@ -263,13 +268,13 @@ ol li:before {
   margin-right: 0.75rem;
 }
 
-/* line 142, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 145, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-social-networks .social-network {
   display: inline-block;
   border-radius: 100%;
 }
 
-/* line 145, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 148, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-social-networks .social-network a {
   background-color: #9e9e9e;
   color: #ffffff;
@@ -283,54 +288,54 @@ ol li:before {
   text-decoration: none;
 }
 
-/* line 160, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 163, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row {
   text-align: center;
 }
 
-/* line 162, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 165, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row .views-field-title {
   font-weight: 400;
   font-size: 1rem;
   margin: 0 0 3px;
 }
 
-/* line 166, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 169, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row .views-field-title a {
   color: #777777;
 }
 
-/* line 170, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 173, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row .views-field-field-fivestar {
   line-height: 1.25;
   background: url(../images/rating-bar.png) center no-repeat;
   margin: 7px 0 6px;
 }
 
-/* line 174, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 177, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row .views-field-field-fivestar form {
   display: inline-block;
   position: relative;
 }
 
-/* line 179, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 182, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-products .views-row .views-field-price__number {
   font-size: 1.25rem;
   color: #444;
   font-weight: 600;
 }
 
-/* line 188, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 191, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .has-glyphicons .select-wrapper:after {
   display: none;
 }
 
-/* line 193, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 196, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets {
   margin-top: 1rem;
 }
 
-/* line 195, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 198, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets .block-title {
   margin: 0;
   font-size: 0.875rem;
@@ -341,7 +346,7 @@ ol li:before {
   padding: 0.75rem 0.625rem;
 }
 
-/* line 204, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 207, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets .facets-widget-links {
   padding: 0.625rem 0.625rem 0;
   border: 1px solid #ddd;
@@ -350,23 +355,23 @@ ol li:before {
   background-color: #fbfbfb;
 }
 
-/* line 210, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 213, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets .facets-widget-links ul {
   padding-left: 0;
 }
 
-/* line 212, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 215, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets .facets-widget-links ul li {
   list-style: none;
 }
 
-/* line 214, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 217, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .block-facets .facets-widget-links ul li a {
   color: #777;
   line-height: 2;
 }
 
-/* line 223, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 226, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form h2 {
   margin: 0;
   font-size: 0.875rem;
@@ -377,7 +382,7 @@ ol li:before {
   padding: 0.75rem 0.625rem;
 }
 
-/* line 232, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 235, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form {
   padding: 0.875rem 0.875rem 0;
   border: 1px solid #ddd;
@@ -386,61 +391,86 @@ ol li:before {
   background-color: #fbfbfb;
 }
 
-/* line 238, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 241, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-item {
   margin-bottom: 1.25rem;
   width: 100%;
 }
 
-/* line 241, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 244, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-item label {
   width: 35%;
 }
 
-/* line 244, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 247, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-item .select-wrapper {
   width: 60%;
 }
 
-/* line 246, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 249, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-item .select-wrapper select {
   width: 100%;
 }
 
-/* line 251, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 254, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-actions {
   display: block;
   text-align: center;
   margin-bottom: 0.625rem;
 }
 
-/* line 254, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 257, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .views-exposed-form form .form-actions .form-submit {
   margin: 0.625rem 0 0.53rem;
 }
 
+/* line 265, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.commerce-cart-block .commerce-cart-block--link {
+  position: relative;
+}
+
+/* line 267, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.commerce-cart-block .commerce-cart-block--link i {
+  font-size: 2.25rem;
+  color: #65829d;
+}
+
+/* line 271, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.commerce-cart-block .commerce-cart-block--link .commerce-cart-block--summary__label {
+  position: absolute;
+  width: 78%;
+  text-align: center;
+  top: 50%;
+  left: 0;
+  display: block;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #65829d;
+  margin: -2px 4px;
+}
+
 @media (max-width: 599px) {
-  /* line 263, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 287, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h1 {
     font-size: 2.25rem;
   }
-  /* line 266, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 290, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h2 {
     font-size: 1.5rem;
   }
-  /* line 269, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 293, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h3 {
     font-size: 1.25rem;
   }
-  /* line 272, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 296, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h4 {
     font-size: 1rem;
   }
-  /* line 275, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 299, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h5 {
     font-size: 0.875rem;
   }
-  /* line 278, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 302, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   h6 {
     font-size: 0.75rem;
   }

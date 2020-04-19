@@ -60,6 +60,9 @@ ol{
   }
 }
 /* Estilos del sitio */
+.name.navbar-brand {
+  display: none;
+}
 .main-container {
   font-size: map-get($sizes, small );
 }
@@ -255,6 +258,27 @@ ol{
         margin: map-get($sizes, "skinny") 0 0.53rem;
       }
       margin-bottom: map-get($sizes, "skinny");
+    }
+  }
+}
+.commerce-cart-block {
+  .commerce-cart-block--link {
+    position: relative;
+    i {
+      font-size: map-get($sizes, "medium");
+      color: color(background, color-3);
+    }
+    .commerce-cart-block--summary__label {
+      position: absolute;
+      width: 78%;
+      text-align: center;
+      top: 50%;
+      left: 0;
+      display: block;
+      line-height: 1;
+      color: color(grayscale, white);
+      background-color: color(background, color-3);
+      margin: -2px 4px;
     }
   }
 }
