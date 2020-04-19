@@ -11,8 +11,13 @@
  * Implements hook_preprocess_region().
  */
 function motollantas_preprocess_region(&$variables) {
-  if (isset($variables['region'])) { 
+  if (isset($variables['region'])) {
     switch ($variables['region']) {
+      case 'highlighted':
+        if(\Drupal::service('path.matcher')->isFrontPage()) {
+          $variables['attributes']['class'][] = 'row';
+        }
+        break;
       case 'footer':
       case 'footer_bottom':
         $variables['attributes']['class'][] = 'container';
