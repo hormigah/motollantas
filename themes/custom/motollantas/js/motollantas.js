@@ -10,7 +10,8 @@
     attach: function (context) {
       $(".field--name-field-slider-item", context).once('slider').each(function () {
         $(this).slick({
-          dots: true
+          dots: true,
+          infinite: true
         });
       });
     }
