@@ -9,7 +9,9 @@
   Drupal.behaviors.MotollantasTheme = {
     attach: function (context) {
       $(".field--name-field-slider-item", context).once('slider').each(function () {
-        $(this).slick();
+        $(this).slick({
+          dots: true
+        });
       });
     }
   };
