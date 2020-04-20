@@ -28,7 +28,7 @@
       });
       this.$el.html(template.render({
         url: this.model.getUrl(),
-        count_text: Drupal.formatPlural(this.model.getCount(), this.model.getCountSingular(), this.model.getCountPlural())
+        count_text: this.model.getCount()
       }));
       var icon = new Drupal.cartFlyout.CartIconView({
         el: this.$el.find('.cart-block--summary__icon'),

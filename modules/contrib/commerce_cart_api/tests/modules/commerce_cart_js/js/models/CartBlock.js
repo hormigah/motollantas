@@ -15,8 +15,8 @@
       carts: [],
 
       countText: {
-        singular: '1 item',
-        plural: '@count items'
+        singular: '1',
+        plural: '@count'
       },
 
       url: '',
