@@ -1,3 +1,45 @@
+header {
+  &.navbar-default {
+    background-color: color(background, color-8);
+    a {
+      color: color(grayscale, white);
+    }
+    .navbar-nav {
+      li {
+        a {
+          color: color(grayscale, white);
+          font-weight: 700;
+          font-size: map-get($sizes, "small");
+          text-transform: uppercase;
+          &:hover, &.is-active {
+            color: color(grayscale, gray-8);
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar-header {
+      width: 20%;
+      img {
+        width: 100%;
+      }
+    }
+    .navbar-collapse {
+      width: 60%;
+    }
+    .header-bottom {
+      width: 20%;
+    }
+    .views-field-field-phone {
+      margin: 13px;
+    }
+  }
+}
 .navbar-default{
     background: color(grayscale, gray-1);
     border: 0;

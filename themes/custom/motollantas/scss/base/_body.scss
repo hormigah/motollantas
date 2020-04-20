@@ -270,14 +270,14 @@ ol{
     }
   }
 }
-.commerce-cart-block {
-  .commerce-cart-block--link {
+.cart-flyout {
+  .cart-block--link__expand {
     position: relative;
     i {
       font-size: map-get($sizes, "medium");
-      color: color(background, color-3);
+      color: color(grayscale, white);
     }
-    .commerce-cart-block--summary__label {
+    .cart-block--summary__count {
       position: absolute;
       width: 78%;
       text-align: center;
@@ -285,9 +285,20 @@ ol{
       left: 0;
       display: block;
       line-height: 1;
+      color: color(grayscale, black);
+      background-color: color(grayscale, white);
+      margin: -8px 4px;
+    }
+  }
+}
+.view-phone-company {
+  .views-field-field-phone {
+    &:before {
+      content: "\f095";
+      font: normal normal normal 12px/1 FontAwesome;
+      font-size: map-get($sizes, "base");
+      margin-right: 5px;
       color: color(grayscale, white);
-      background-color: color(background, color-3);
-      margin: -2px 4px;
     }
   }
 }
