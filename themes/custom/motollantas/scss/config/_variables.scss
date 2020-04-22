@@ -38,6 +38,7 @@ $colors: (
    ),
    controls:(
       base     : $control01,
+      hover    : $control02,
       dark     : $control01-dark,
    ),
    grayscale: (
@@ -50,6 +51,9 @@ $colors: (
       gray-6   : $grayscaleLevel-6,
       gray-7   : $grayscaleLevel-7,
       gray-8   : $grayscaleLevel-8,
+      gray-9   : $grayscaleLevel-9,
+      gray-10   : $grayscaleLevel-10,
+      gray-11   : $grayscaleLevel-11,
       base     : $grayscaleBase,
       black    : $grayscaleBlack 
    ),

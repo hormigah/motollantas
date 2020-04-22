@@ -11,7 +11,7 @@ a, button {
    }
 
 	&:hover, &:focus {
-      color: color( controls, dark );
+      color: color( controls, hover );
       text-decoration: underline;
    }
    

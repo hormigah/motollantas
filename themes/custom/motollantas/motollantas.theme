@@ -19,6 +19,7 @@ function motollantas_preprocess_region(&$variables) {
         }
         break;
       case 'footer':
+      case 'header':
       case 'footer_bottom':
         $variables['attributes']['class'][] = 'container';
           break;

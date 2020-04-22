@@ -65,6 +65,37 @@ ol{
 }
 .main-container {
   font-size: map-get($sizes, small );
+  margin-top: map-get($sizes, half );
+}
+.container-header {
+  background-color: color(grayscale, black);
+  .breadcrumb {
+    background-color: transparent;
+    margin: 6.5px 0;
+    padding: 0;
+    li {
+      display: inline;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      color: color(grayscale, white);
+      font-size: map-get($sizes, small );
+      &::before {
+        content: '\f054';
+        font-family: FontAwesome;
+        color: color(grayscale, white);
+      }
+      &:first-child {
+        &::before {
+          content: '';
+        }
+      }
+      a {
+        color: color(grayscale, white);
+        font-size: map-get($sizes, small );
+      }
+    }
+  }
 }
 .field--name-field-contact-information {
   .paragraph {
@@ -302,6 +333,132 @@ ol{
     }
   }
 }
+
+.cart-form {
+  border-top: 4px solid color(background, color-3);
+  padding: map-get($sizes, "half") map-get($sizes, "half") map-get($sizes, "skinny");
+  background: color(background, color-6);
+  background: -webkit-linear-gradient( top , #FFF 1%, #fcfcfc 98%) repeat scroll 0 0 transparent;
+  background: linear-gradient(to bottom, #FFF 1%, #fcfcfc 98%) repeat scroll 0 0 transparent;
+  border-bottom: 1px solid color(grayscale, gray-9);
+  border-left: 1px solid color(grayscale, gray-10);
+  border-right: 1px solid color(grayscale, gray-10);
+  margin: map-get($sizes, "thumb") 0;
+  min-height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+  table {
+    thead {
+      tr {
+        th {
+          padding: map-get($sizes, "skinny");
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: map-get($sizes, "skinny");
+          border-top: 1px solid color(grayscale, gray-11);
+        }
+      }
+    }
+  }
+  input[type="number"] {
+    border: 1px solid color(grayscale, gray-3);
+    height: 35px;
+    text-align: center;
+    width: 55px;
+  }
+  #edit-actions {
+    border-top: 1px solid color(grayscale, gray-11);
+    padding: 20px 10px;
+    text-align: right;
+  }
+  .btn-danger {
+    font-size: inherit;
+    padding: map-get($sizes, "skinny");
+    margin: 0;
+  }
+  .views-field-total-price__number {
+    text-align: right;
+  }
+}
+.order-total-line-label {
+  margin-right: map-get($sizes, "skinny");
+}
+.order-total-line-value {
+  width: auto;
+}
+.order-total-line__total {
+  .order-total-line-value {
+    color: color(background, color-3);
+    font-size: map-get($sizes, "thumb");
+  }
+}
+.cart-form .button {
+    transition: all 0.1s ease 0s;
+    -moz-transition: all 0.1s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+}
+.cart-form #edit-checkout {
+    margin-right: 0;
+    background-color: #65829d;
+    border-color: #65829d #65829d #006699;
+    color: #ffffff;
+}
+.cart-form #edit-checkout:hover,
+.cart-form #edit-checkout:focus {
+    background-color: #65829d;
+    border-color: #65829d #65829d #0077e3;
+}
+.cart-form .field--name-title {  display: none;}
+@media screen and (max-width: 479px) {
+    .cart-form { padding: 10px; }
+    .cart-form th,
+    .cart-form td {
+        padding: 4px 5px;
+    }
+    .cart-form #edit-actions { padding: 10px 5px; }
+}
+.checkout-pane {
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  background-color: color(grayscale, white);
+  border: 1px solid color(secondary, light);
+  .panel-heading {
+    color: #65829d;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: none;
+  }
+}
+
+.layout-region-checkout-secondary {
+  border-top: 4px solid color(controls, base);
+  padding: map-get($sizes, "half") map-get($sizes, "half") map-get($sizes, "skinny");
+  background: #F5F5F5;
+  background: linear-gradient(to bottom, #FFF 1%, #fcfcfc 98%) repeat scroll 0 0 transparent;
+  box-sizing: border-box;
+  border-bottom: 1px solid #DFDFDF;
+  border-left: 1px solid #ECECEC;
+  border-right: 1px solid #ECECEC;
+  margin-bottom: 20px;
+  min-height: 100px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
+  h3 {
+    font-size: map-get($sizes, "half");
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 27px;
+    margin: 0 0 14px;
+    color: #65829d;
+    text-transform: none;
+  }
+}
+
+
 
 @include mq-max(sm){
   h1{
