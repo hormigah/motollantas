@@ -34,7 +34,7 @@ function motollantas_preprocess_page_title(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   
   $paths_excluid = [
-    '/productos'
+//    '/productos'
   ];
   
   if(!in_array($current_path, $paths_excluid)) {

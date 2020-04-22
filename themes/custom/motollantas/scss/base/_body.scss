@@ -298,6 +298,7 @@ ol{
       color: color(grayscale, white);      
       background-color: color(background, color-3);
       border-color: color(background, color-3) color(background, color-3) color(background, color-3);
+      margin-right: 0;
     }
   }
 }
@@ -421,6 +422,7 @@ ol{
     }
     .cart-form #edit-actions { padding: 10px 5px; }
 }
+.layout-region-checkout-main {
 .checkout-pane {
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -432,6 +434,7 @@ ol{
     background-color: #f5f5f5;
     border: none;
   }
+}
 }
 
 .layout-region-checkout-secondary {
@@ -455,6 +458,23 @@ ol{
     margin: 0 0 14px;
     color: #65829d;
     text-transform: none;
+  }
+  table {
+    border: none;
+    > tbody {
+      > tr {
+        &:nth-of-type(odd) {
+          background-color: transparent;
+        }
+        > td {
+          border: none;
+          border-top: 1px solid #dcdcdc;
+        }
+      }
+    }
+  }
+  .views-field-quantity {
+    vertical-align: middle;
   }
 }
 
