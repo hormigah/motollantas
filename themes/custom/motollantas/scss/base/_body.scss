@@ -497,6 +497,18 @@ ol{
   .btn-danger {
     margin: 0;
   }
+  table {
+    > tr {
+      > td {
+        vertical-align: middle;
+      }
+    }
+  }
+  .cart-block--offcanvas-contents__update {
+    font-size: map-get($sizes, "tiny");
+    float: right;
+    padding: map-get($sizes, "tiny");
+  }
 }
 
 
