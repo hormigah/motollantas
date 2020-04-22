@@ -20,18 +20,18 @@ header {
       }
     }
   }
-  .container {
+  .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     .navbar-header {
-      width: 40%;
+      width: 30%;
       img {
         width: 100%;
       }
     }
     .header-bottom {
-      width: 60%;
+      width: 70%;
     }
     .views-field-field-phone {
       margin: 13px;

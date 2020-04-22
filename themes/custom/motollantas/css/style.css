@@ -1320,29 +1320,29 @@ header.navbar-default .navbar-nav li a:hover, header.navbar-default .navbar-nav 
 }
 
 /* line 23, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
-header .container {
+header .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 /* line 27, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
-header .container .navbar-header {
-  width: 40%;
+header .header-top .navbar-header {
+  width: 30%;
 }
 
 /* line 29, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
-header .container .navbar-header img {
+header .header-top .navbar-header img {
   width: 100%;
 }
 
 /* line 33, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
-header .container .header-bottom {
-  width: 60%;
+header .header-top .header-bottom {
+  width: 70%;
 }
 
 /* line 36, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
-header .container .views-field-field-phone {
+header .header-top .views-field-field-phone {
   margin: 13px;
 }
 
