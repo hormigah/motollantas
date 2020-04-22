@@ -25,23 +25,20 @@ header {
     align-items: center;
     justify-content: space-between;
     .navbar-header {
-      width: 20%;
+      width: 40%;
       img {
         width: 100%;
       }
     }
-    .navbar-collapse {
-      width: 60%;
-    }
     .header-bottom {
-      width: 20%;
+      width: 60%;
     }
     .views-field-field-phone {
       margin: 13px;
     }
   }
 }
-.navbar-default{
+.navbar-default {
     background: color(grayscale, gray-1);
     border: 0;
     border-radius: 0;

@@ -86,8 +86,10 @@
       {% endif %}
       {# Navigation (collapsible) #}
       {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
+        <div class="{{ container }}">
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            {{ page.navigation_collapsible }}
+          </div>
         </div>
       {% endif %}
     </header>
