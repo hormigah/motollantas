@@ -312,6 +312,7 @@ ol{
     i {
       font-size: map-get($sizes, "medium");
       color: color(grayscale, gray-12);
+      margin-top: 5px;
     }
     .cart-block--summary__count {
       position: absolute;
@@ -555,24 +556,26 @@ ol{
     }
   }
 }
-
-@include mq-max(sm){
-  h1{
-    font-size: map-get($sizes, "medium");
-  }
-  h2{
+.commerce-product {
+  .views-field-title {
+    margin: map-get($sizes, "small") 0;
     font-size: map-get($sizes, "half");
+    font-weight: 600;
+    line-height: 1;
+    color: color(grayscale, gray-15);
   }
-  h3{
-    font-size: map-get($sizes, "thumb");
+  .field--name-field-fivestar {
+    margin-bottom: map-get($sizes, "thumb");
   }
-  h4{
-    font-size: map-get($sizes, "base");
-  }
-  h5{
-    font-size: map-get($sizes, "small");
-  }
-  h6{
-    font-size: map-get($sizes, "tiny");
+}
+
+@include mq-min(sm) {
+  .cart-flyout {
+    .cart-block--link__expand {
+      position: relative;
+      i {
+        margin-top: 0;
+      }
+    }
   }
 }
