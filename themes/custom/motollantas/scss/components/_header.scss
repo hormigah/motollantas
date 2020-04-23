@@ -13,6 +13,36 @@ header {
           color: color(background, color-7);
         }
       }
+    }    
+    .navbar-collapse {
+      margin: 0;
+      padding: 0;
+      background: color(background, color-11);
+      border-radius: 5px;
+      border-color: transparent;
+      .navbar-nav {
+        margin: 0;
+        li {
+          &.first {
+            a {
+
+            }
+          }
+          a {
+            font-weight: 700;
+            font-size: map-get($sizes, "tiny");
+            text-transform: uppercase;
+            color: color(grayscale, black);
+            padding: 0.52rem map-get($sizes, "base");
+            margin: 0 1px;
+            &:hover, &.is-active {
+              color: color(grayscale, white);
+              background-color: color(background, color-10);
+              border-radius: 5px;
+            }
+          }
+        }
+      }
     }
   }
   .header-top {
@@ -20,7 +50,7 @@ header {
     align-items: center;
     justify-content: space-between;
     .navbar-header {
-      width: 30%;
+      width: 20%;
       img {
         width: 100%;
       }
@@ -31,34 +61,6 @@ header {
     .views-field-field-phone {
       margin: 13px;
     }
-  }
-  .navbar-collapse {
-    margin: 0;
-    padding: 0;
-    background: color(background, color-11);
-    border-radius: 5px;
-    border-color: transparent;
-    .navbar-nav {
-      margin: 0;
-      li {
-        &.first {
-          a {
-            border-radius: 5px 0 0 5px;
-          }
-        }
-        a {
-          font-weight: 700;
-          font-size: map-get($sizes, "small");
-          text-transform: uppercase;
-          color: color(grayscale, black);
-          &:hover, &.is-active {
-            color: color(grayscale, white);
-            background: color(background, color-10);
-          }
-        }
-      }
-    }
-    
   }
 }
 
