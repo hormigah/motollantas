@@ -515,6 +515,40 @@ ol{
     padding: map-get($sizes, "tiny");
   }
 }
+.view-informacion-multiple {
+  margin-bottom: map-get($sizes, "medium");
+  border-top: 1px solid color(grayscale, gray-13);
+  border-bottom: 1px solid color(grayscale, gray-13);
+  background-color: color(background, color-7);
+  width: 100vw;
+  margin-left: 50% !important;
+  transform: translateX(-50vw);
+  .view-row {
+    border-left: 1px solid color(grayscale, gray-13);
+    padding-top: map-get($sizes, "tiny");
+    padding-bottom: map-get($sizes, "tiny");
+    &:first-child {
+      border-left: none;
+    }
+    .bs-region--right {
+      padding-left: 0;
+    }
+    .field--name-field-title {
+      color: color(grayscale, gray-14);
+      font-size: map-get($sizes, "base");
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+    .field--name-field-information {
+      font-size: map-get($sizes, "tiny");
+      margin: 0;
+      line-height: 1;
+    }
+  }
+}
 
 
 
