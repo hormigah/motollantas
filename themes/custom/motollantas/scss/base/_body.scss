@@ -270,8 +270,11 @@ ol{
     border-radius: 0 0 0 0;
     background-color: color(background, color-7);
     .form-item {
-      margin-bottom: map-get($sizes, "thumb");
+      margin: map-get($sizes, "small") 0;
       width: 100%;
+      &:first-child {
+        display: none;
+      }
       label {
         width: 35%;
       }
@@ -288,6 +291,7 @@ ol{
       .form-submit {
         margin: map-get($sizes, "skinny") 0 0.53rem;
       }
+      margin-top: 22px;
       margin-bottom: map-get($sizes, "skinny");
     }
   }
