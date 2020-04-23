@@ -2,20 +2,15 @@ header {
   &.navbar-default {
     background-color: color(grayscale, white);
     margin-bottom: 0;
+    border: 0;
+    border-radius: 0;
     a {
-      color: color(grayscale, white);
+      color: color(primary, base);
     }
-    .navbar-nav {
+    .header-top {
       li {
         a {
-          color: color(grayscale, white);
-          font-weight: 700;
-          font-size: map-get($sizes, "small");
-          text-transform: uppercase;
-          &:hover, &.is-active {
-            color: color(grayscale, gray-8);
-            background-color: transparent;
-          }
+          color: color(background, color-7);
         }
       }
     }
@@ -37,23 +32,34 @@ header {
       margin: 13px;
     }
   }
-}
-.navbar-default {
-    background: color(grayscale, gray-1);
-    border: 0;
-    border-radius: 0;
-    .navbar-collapse{
-        margin: 0;
-        padding: 0;
-    }
-    .navbar-nav{
-        margin: 0;
-        li{
-            a{
-                color: color(controls, base);
-            }
+  .navbar-collapse {
+    margin: 0;
+    padding: 0;
+    background: color(background, color-11);
+    border-radius: 5px;
+    border-color: transparent;
+    .navbar-nav {
+      margin: 0;
+      li {
+        &.first {
+          a {
+            border-radius: 5px 0 0 5px;
+          }
         }
+        a {
+          font-weight: 700;
+          font-size: map-get($sizes, "small");
+          text-transform: uppercase;
+          color: color(grayscale, black);
+          &:hover, &.is-active {
+            color: color(grayscale, white);
+            background: color(background, color-10);
+          }
+        }
+      }
     }
+    
+  }
 }
 
 .menu{

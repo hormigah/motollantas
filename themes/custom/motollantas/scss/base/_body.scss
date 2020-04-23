@@ -307,7 +307,7 @@ ol{
     position: relative;
     i {
       font-size: map-get($sizes, "medium");
-      color: color(grayscale, white);
+      color: color(grayscale, gray-12);
     }
     .cart-block--summary__count {
       position: absolute;
@@ -317,8 +317,8 @@ ol{
       left: 0;
       display: block;
       line-height: 1;
-      color: color(grayscale, black);
-      background-color: color(grayscale, white);
+      color: color(grayscale, white);
+      background-color: color(grayscale, gray-12);
       margin: -8px 4px;
     }
   }
@@ -330,7 +330,7 @@ ol{
       font: normal normal normal 12px/1 FontAwesome;
       font-size: map-get($sizes, "base");
       margin-right: 5px;
-      color: color(grayscale, white);
+      color: color(primary, base);
     }
   }
 }
