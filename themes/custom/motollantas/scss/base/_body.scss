@@ -532,6 +532,10 @@ ol{
     &:first-child {
       border-left: none;
     }
+    .paragraph--type-titulo-subtitulo-imagen {
+      display: flex;
+      justify-content: center;
+    }
     .bs-region--right {
       padding-left: 0;
     }
