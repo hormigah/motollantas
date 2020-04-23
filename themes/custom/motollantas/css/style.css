@@ -799,12 +799,28 @@ ol li:before {
   margin-bottom: 1.25rem;
 }
 
-@media (min-width: 540px) {
-  /* line 574, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 575, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.commerce-product .product-detail-info {
+  padding: 1.25rem 0;
+  margin: 1.25rem 0;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* line 580, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.commerce-product .product-detail-info .views-field-price__number {
+  font-size: 2.25rem;
+  line-height: 1;
+  color: #65829d;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  /* line 591, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand {
     position: relative;
   }
-  /* line 576, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 593, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand i {
     margin-top: 0;
   }
@@ -824,7 +840,7 @@ ol li:before {
   width: 100%;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
   /* line 1, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_buttons.scss */
   .btn {
     width: auto;
@@ -1447,7 +1463,7 @@ header .header-top .views-field-field-phone {
   background: none;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
   /* line 84, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
   header.navbar-default .header-top .navbar-header {
     width: 35%;
@@ -1467,7 +1483,7 @@ header .header-top .views-field-field-phone {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 992px) {
   /* line 110, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
   header.navbar-default .header-top .navbar-header {
     width: 30%;

@@ -567,6 +567,23 @@ ol{
   .field--name-field-fivestar {
     margin-bottom: map-get($sizes, "thumb");
   }
+  .field--name-body {
+    p {
+      
+    }
+  }
+  .product-detail-info {
+    padding: map-get($sizes, "thumb") 0;
+    margin: map-get($sizes, "thumb") 0;
+    border-top: 1px solid color(grayscale, gray-16);
+    border-bottom: 1px solid color(grayscale, gray-16);
+    .views-field-price__number {
+      font-size: map-get($sizes, "medium");
+      line-height: 1;
+      color: color(controls, base);
+      font-weight: 600;
+    }
+  }
 }
 
 @include mq-min(sm) {
