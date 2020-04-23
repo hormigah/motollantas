@@ -515,7 +515,7 @@ ol{
     padding: map-get($sizes, "tiny");
   }
 }
-.view-informacion-multiple {
+.block-views-blockinformacion-multiple-block-1 {
   margin-bottom: map-get($sizes, "medium");
   border-top: 1px solid color(grayscale, gray-13);
   border-bottom: 1px solid color(grayscale, gray-13);
@@ -523,6 +523,8 @@ ol{
   width: 100vw;
   margin-left: 50% !important;
   transform: translateX(-50vw);
+}
+.view-informacion-multiple {
   .view-row {
     border-left: 1px solid color(grayscale, gray-13);
     padding-top: map-get($sizes, "tiny");
