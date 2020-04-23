@@ -82,14 +82,16 @@ header {
     &.navbar-default {
       .header-top {
         .navbar-header {
-          width: 30%;
+          width: 35%;
         }
         .header-bottom {
-          width: 70%;
+          width: 65%;
         }
-        .views-field-field-phone {
-          margin: 13px;
-        }
+      }
+    }
+    .header-top {
+      .views-field-field-phone {
+        margin: 13px;
       }
     }
   }
@@ -105,10 +107,10 @@ header {
     &.navbar-default {
       .header-top {
         .navbar-header {
-          width: 40%;
+          width: 30%;
         }
         .header-bottom {
-          width: 60%;
+          width: 70%;
         }
       }
     }
