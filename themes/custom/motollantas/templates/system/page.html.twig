@@ -66,7 +66,9 @@
           <div class="header-top">
             <div class="navbar-header">
               {{ page.navigation }}
-              {# .btn-navbar is used as the toggle for collapsed navbar content #}
+            </div>
+            <div class="header-bottom">
+              {{ page.navigation_bottom }}
               {% if page.navigation_collapsible %}
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                   <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
@@ -75,9 +77,6 @@
                   <span class="icon-bar"></span>
                 </button>
               {% endif %}
-            </div>
-            <div class="header-bottom">
-              {{ page.navigation_bottom }}
             </div>
           </div>
           {# Navigation (collapsible) #}

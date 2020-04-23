@@ -556,8 +556,6 @@ ol{
   }
 }
 
-
-
 @include mq-max(sm){
   h1{
     font-size: map-get($sizes, "medium");
