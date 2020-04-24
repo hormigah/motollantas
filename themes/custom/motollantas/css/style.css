@@ -832,7 +832,7 @@ ol li:before {
 
 /* line 599, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .region-sidebar-second .fields .views-field-price__number {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 5px;
 }
 
@@ -841,12 +841,47 @@ ol li:before {
   font-size: 0.75rem;
 }
 
+/* line 608, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.field--name-dynamic-token-fieldnode-fecha-dia-mes {
+  text-align: center;
+}
+
+/* line 610, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.field--name-dynamic-token-fieldnode-fecha-dia-mes .day {
+  background: #F4F4F4;
+  font-size: 1rem;
+  padding: 0.625rem;
+  color: #65829d;
+}
+
+/* line 616, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.field--name-dynamic-token-fieldnode-fecha-dia-mes .month {
+  background: #65829d;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.07) inset;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 0 10px 2px;
+}
+
+/* line 626, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.node--type-blog-post .field--name-node-title {
+  color: #65829d;
+  font-size: 1.25rem;
+}
+
+/* line 629, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.node--type-blog-post .field--name-node-title a {
+  color: #65829d;
+  font-size: 1.25rem;
+}
+
 @media (min-width: 768px) {
-  /* line 611, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 638, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand {
     position: relative;
   }
-  /* line 613, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 640, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand i {
     margin-top: 0;
   }
