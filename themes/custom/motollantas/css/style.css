@@ -359,8 +359,8 @@ ol li:before {
   position: relative;
 }
 
-/* line 213, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
-.view-products .views-row .views-field-price__number {
+/* line 215, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.views-field-price__number {
   font-size: 1.25rem;
   color: #444;
   font-weight: 600;
@@ -815,12 +815,38 @@ ol li:before {
   font-weight: 600;
 }
 
+/* line 589, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.region-sidebar-second h2 {
+  margin: 0 0 0.625rem;
+  line-height: 1.2;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #313131;
+  text-transform: uppercase;
+}
+
+/* line 597, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.region-sidebar-second .fields {
+  padding-left: 0;
+}
+
+/* line 599, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.region-sidebar-second .fields .views-field-price__number {
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* line 604, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.region-sidebar-second a {
+  font-size: 0.75rem;
+}
+
 @media (min-width: 768px) {
-  /* line 591, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 611, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand {
     position: relative;
   }
-  /* line 593, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 613, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand i {
     margin-top: 0;
   }

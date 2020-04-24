@@ -210,12 +210,12 @@ ol{
         position: relative;
       }
     }
-    .views-field-price__number {
-      font-size: map-get($sizes, "thumb");
-      color: color(primary, dark);
-      font-weight: 600;
-    }
   } 
+}
+.views-field-price__number {
+  font-size: map-get($sizes, "thumb");
+  color: color(primary, dark);
+  font-weight: 600;
 }
 .has-glyphicons {
   .select-wrapper {
@@ -583,6 +583,26 @@ ol{
       color: color(controls, base);
       font-weight: 600;
     }
+  }
+}
+.region-sidebar-second {
+  h2 {
+    margin: 0 0 map-get($sizes, "skinny");
+    line-height: 1.2;
+    font-size: map-get($sizes, "base");
+    font-weight: bold;
+    color: color(grayscale, gray-14);
+    text-transform: uppercase;
+  }
+  .fields {
+    padding-left: 0;
+    .views-field-price__number {
+      font-size: map-get($sizes, "small");
+      margin-top: 5px;
+    }
+  }
+  a {
+    font-size: map-get($sizes, "tiny");
   }
 }
 
