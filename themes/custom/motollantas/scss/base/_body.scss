@@ -624,6 +624,9 @@ ol{
 }
 .node--type-blog-post {
   margin-bottom: map-get($sizes, "medium");
+  .bs-region--top {
+    margin-bottom: map-get($sizes, "thumb");
+  }
   .field--name-node-title {
     color: color(background, color-3);
     font-size: map-get($sizes, "thumb");
