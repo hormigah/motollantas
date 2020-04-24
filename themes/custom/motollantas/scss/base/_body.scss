@@ -612,6 +612,7 @@ ol{
     font-size: map-get($sizes, "base");
     padding: map-get($sizes, "skinny");
     color: color(background, color-3);
+    font-weight: 600;
   }
   .month {
     background: color(background, color-3);
@@ -640,6 +641,25 @@ ol{
   }
   .field--name-node-post-date {
     border-bottom: 1px solid color(secondary, light);
+  }
+}
+.view-blog-recientes {
+  .views-field-field-images {
+    a {
+      border: 1px solid color(secondary, light);
+      padding: 2px;
+      display: block;
+    }
+  }
+  .views-field-title {
+    line-height: 1;
+    a {
+      font-size: map-get($sizes, "tiny");
+    }
+  }
+  .views-field-created {
+    padding-top: 5px;
+    font-size: map-get($sizes, "tiny");
   }
 }
 

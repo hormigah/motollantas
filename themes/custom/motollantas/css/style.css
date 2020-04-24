@@ -852,9 +852,10 @@ ol li:before {
   font-size: 1rem;
   padding: 0.625rem;
   color: #65829d;
+  font-weight: 600;
 }
 
-/* line 616, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 617, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .field--name-dynamic-token-fieldnode-fecha-dia-mes .month {
   background: #65829d;
   border-radius: 0 0 2px 2px;
@@ -864,44 +865,67 @@ ol li:before {
   padding: 0 10px 2px;
 }
 
-/* line 625, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 626, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post {
   margin-bottom: 2.25rem;
 }
 
-/* line 627, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 628, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .bs-region--top {
   margin-bottom: 1.25rem;
 }
 
-/* line 630, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 631, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-node-title {
   color: #65829d;
   font-size: 1.25rem;
 }
 
-/* line 633, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 634, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-node-title h2 {
   font-size: 1.25rem;
   line-height: 1;
 }
 
-/* line 637, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 638, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-node-title a {
   color: #65829d;
 }
 
-/* line 641, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+/* line 642, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-node-post-date {
   border-bottom: 1px solid #dddddd;
 }
 
+/* line 648, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.view-blog-recientes .views-field-field-images a {
+  border: 1px solid #dddddd;
+  padding: 2px;
+  display: block;
+}
+
+/* line 654, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.view-blog-recientes .views-field-title {
+  line-height: 1;
+}
+
+/* line 656, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.view-blog-recientes .views-field-title a {
+  font-size: 0.75rem;
+}
+
+/* line 660, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+.view-blog-recientes .views-field-created {
+  padding-top: 5px;
+  font-size: 0.75rem;
+}
+
 @media (min-width: 768px) {
-  /* line 648, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 668, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand {
     position: relative;
   }
-  /* line 650, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
+  /* line 670, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
   .cart-flyout .cart-block--link__expand i {
     margin-top: 0;
   }
