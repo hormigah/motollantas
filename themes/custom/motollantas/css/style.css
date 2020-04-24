@@ -878,7 +878,7 @@ ol li:before {
 /* line 630, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-node-title h2 {
   font-size: 1.25rem;
-  line-height: 0;
+  line-height: 1;
 }
 
 /* line 634, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */

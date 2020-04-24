@@ -629,7 +629,7 @@ ol{
     font-size: map-get($sizes, "thumb");
     h2 {
       font-size: map-get($sizes, "thumb");
-      line-height: 0;
+      line-height: 1;
     }
     a {
       color: color(background, color-3);
