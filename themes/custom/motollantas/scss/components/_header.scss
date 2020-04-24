@@ -1,11 +1,11 @@
 header {
   &.navbar-default {
-    background-color: color(grayscale, white);
+    background-color: color(background, color-13);
     margin-bottom: 0;
     border: 0;
     border-radius: 0;
     a {
-      color: color(primary, base);
+      color: color(background, color-11);
     }
     .header-top {
       li {
@@ -32,12 +32,12 @@ header {
             font-weight: 700;
             font-size: map-get($sizes, "tiny");
             text-transform: uppercase;
-            color: color(grayscale, black);
+            color: color(grayscale, white);
             padding: 0.52rem map-get($sizes, "base");
             margin: 0 1px;
             &:hover, &.is-active {
               color: color(grayscale, white);
-              background-color: color(background, color-10);
+              background-color: color(grayscale, black);
               border-radius: 5px;
             }
           }

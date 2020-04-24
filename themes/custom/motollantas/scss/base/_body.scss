@@ -311,7 +311,7 @@ ol{
     position: relative;
     i {
       font-size: map-get($sizes, "medium");
-      color: color(grayscale, gray-12);
+      color: color(background, color-11);
       margin-top: 5px;
     }
     .cart-block--summary__count {
@@ -323,7 +323,7 @@ ol{
       display: block;
       line-height: 1;
       color: color(grayscale, white);
-      background-color: color(grayscale, gray-12);
+      background-color: color(background, color-11);
       margin: -8px 4px;
     }
   }
@@ -336,7 +336,7 @@ ol{
       font: normal normal normal 12px/1 FontAwesome;
       font-size: map-get($sizes, "small");
       margin-right: 5px;
-      color: color(primary, base);
+      color: color(background, color-11);
     }
   }
 }
@@ -623,13 +623,20 @@ ol{
   }
 }
 .node--type-blog-post {
+  margin-bottom: map-get($sizes, "medium");
   .field--name-node-title {
     color: color(background, color-3);
     font-size: map-get($sizes, "thumb");
+    h2 {
+      font-size: map-get($sizes, "thumb");
+      line-height: 0;
+    }
     a {
       color: color(background, color-3);
-      font-size: map-get($sizes, "thumb");
     }
+  }
+  .field--name-node-post-date {
+    border-bottom: 1px solid color(secondary, light);
   }
 }
 
