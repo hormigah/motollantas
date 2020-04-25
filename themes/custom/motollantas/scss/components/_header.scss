@@ -35,10 +35,15 @@ header {
             color: color(grayscale, white);
             padding: 0.52rem map-get($sizes, "base");
             margin: 0 1px;
-            &:hover, &.is-active {
+            &:hover, &.is-active, &.active-trail {
               color: color(grayscale, white);
               background-color: color(grayscale, black);
               border-radius: 5px;
+            }
+          }
+          &.expanded {
+            .dropdown-menu {
+              background: color(grayscale, black);
             }
           }
         }
