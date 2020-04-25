@@ -642,6 +642,10 @@ ol{
   .field--name-node-post-date {
     border-bottom: 1px solid color(secondary, light);
   }
+  .field--name-field-images {
+    border-bottom: 1px solid color(secondary, light);
+    padding: 2px;
+  }
 }
 .view-blog-recientes {
   .views-field-field-images {
@@ -654,7 +658,7 @@ ol{
   .views-field-title {
     line-height: 1;
     a {
-      font-size: map-get($sizes, "tiny");
+      font-size: map-get($sizes, "small");
     }
   }
   .views-field-created {
