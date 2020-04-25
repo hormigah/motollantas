@@ -899,7 +899,7 @@ ol li:before {
 
 /* line 645, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .node--type-blog-post .field--name-field-images {
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   padding: 2px;
 }
 
