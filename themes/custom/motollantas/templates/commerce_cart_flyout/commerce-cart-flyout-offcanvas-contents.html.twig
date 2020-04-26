@@ -1,0 +1,7 @@
+<% _.each(carts, function(cart) { %>
+  <div data-cart-contents='cart.order_id) %>'></div>
+  <div class="cart-block-links">
+    <a href="/cart>/order_information" class="btn btn-link btn-cart">{{ 'View cart'|t }}</a>
+    <a href="/checkout/<% print(cart.order_id) %>/order_information" class="btn btn-checkout btn-primary">{{ 'Checkout'|t }}</a>
+  </div>
+<% }); %>
