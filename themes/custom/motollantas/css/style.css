@@ -965,7 +965,7 @@ ol li:before {
 .cart-offcanvas.is-open .cart--cart-offcanvas__close .button {
   margin: 10px;
   padding: 6px 10px;
-  background-color: #7b7b7b;
+  background-color: #f5f5f5;
   color: #ffffff;
 }
 
