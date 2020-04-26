@@ -708,13 +708,13 @@ ol{
       .btn{
         &.btn-danger {
           padding: 6px 15px;
-          background-color: color(background, color-6);
+          background-color: color(background, color-14);
           color: color(background, color-11);
         }
       }
     }
     .cart-block--offcanvas-contents__update {
-      background-color: color(background, color-14);
+      background-color: color(background, color-11);
       color: color(grayscale, white);
     }
   }

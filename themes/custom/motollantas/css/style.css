@@ -977,13 +977,13 @@ ol li:before {
 /* line 709, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .cart-offcanvas.is-open .cart-block--offcanvas-cart-table__remove .btn.btn-danger {
   padding: 6px 15px;
-  background-color: #f5f5f5;
+  background-color: #d0d0d0;
   color: #252525;
 }
 
 /* line 716, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .cart-offcanvas.is-open .cart-block--offcanvas-contents__update {
-  background-color: #d0d0d0;
+  background-color: #252525;
   color: #ffffff;
 }
 
