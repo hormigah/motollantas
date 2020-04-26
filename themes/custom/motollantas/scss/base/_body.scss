@@ -666,6 +666,19 @@ ol{
     font-size: map-get($sizes, "tiny");
   }
 }
+.block-content--type-promociones {
+  &.row {
+    margin-left: -4px;
+    margin-right: -4px;
+    [class*="col-"] {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+  .field--name-dynamic-token-fieldblock-content-image-4 {
+    margin-top: 14px;
+  }
+}
 
 @include mq-min(sm) {
   .cart-flyout {
