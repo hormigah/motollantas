@@ -682,10 +682,21 @@ ol{
 .cart-offcanvas{
   &.is-open {
     border-left: 5px solid color(background, color-11);
-    .cart-block--offcanvas-contents__items {
-      text-align: center;
-      .cart-block--offcanvas-cart-table__title {
-        text-align: left;
+    background-color: color(background, color-6);
+    .btn{
+      padding: 6px 15px;
+    }
+    .cart--cart-offcanvas__close {
+      .button {
+        margin: 10px;
+        padding: 6px 10px;
+      }
+    }
+    .cart-block--offcanvas-cart-table__remove {
+      .btn{
+        &.btn-danger {
+          padding: 6px 15px;
+        }
       }
     }
   }
