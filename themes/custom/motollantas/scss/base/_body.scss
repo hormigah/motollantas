@@ -719,6 +719,31 @@ ol{
     }
   }
 }
+.field--name-field-paragraphs-imgtd {
+  .fields {
+    position: absolute;
+    top: 0;
+    margin: map-get($sizes, "medium") auto 0;
+    text-align: center;
+    .field--name-field-title {
+      font-size: map-get($sizes, "large");
+      line-height: 1;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 0 0 map-get($sizes, "base");
+    }
+    .field--name-field-description {
+      font-weight: 300;
+      font-size: map-get($sizes, "half");
+      line-height: 1;
+    }
+  }
+}
+.block-fluid {
+  width: 100vw;
+  margin-left: 50% !important;
+  transform: translateX(-50vw);
+}
 
 @include mq-min(sm) {
   .cart-flyout {
