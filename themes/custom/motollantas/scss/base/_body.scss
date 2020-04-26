@@ -687,12 +687,16 @@ ol{
       padding: 6px 15px;
       &.btn-primary {
         background-color: color(background, color-13);
+        margin-top:  map-get($sizes, "base");
+        padding: map-get($sizes, "tiny") map-get($sizes, "tiny");
       }
     }
     .cart--cart-offcanvas__close {
       .button {
         margin: 10px;
-        padding: 6px 10px;
+        padding: 6px 10px;   
+        background-color: color(secondary, base);
+        color: color(grayscale, white);
       }
     }
     .cart-block--offcanvas-cart-table__remove {
@@ -701,6 +705,10 @@ ol{
           padding: 6px 15px;
         }
       }
+    }
+    .cart-block--offcanvas-contents__update {   
+      background-color: color(secondary, base);
+      color: color(grayscale, white);
     }
   }
 }
