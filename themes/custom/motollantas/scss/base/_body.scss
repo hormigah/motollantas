@@ -267,10 +267,6 @@ ol{
     border: 1px solid color(secondary, light);
     background-color: color(background, color-6);
     padding: map-get($sizes, "tiny") map-get($sizes, "skinny");
-    .title-line {
-      background-color: transparent;
-      
-    }
   }
   form {
     padding: map-get($sizes, "small") map-get($sizes, "small") 0;
@@ -747,41 +743,49 @@ ol{
     height: 350px;
   }
 }
-
-.block {
-  margin-bottom: map-get($sizes, "medium");
-  &.block-fluid {
-    width: 100vw;
-    margin-left: 50% !important;
-    transform: translateX(-50vw);
-  }
-  .block-title {
-    color: color(grayscale, gray-14);
-    padding-right: map-get($sizes, "half");
-    font-size: map-get($sizes, "base");
-    text-transform: uppercase;
-    line-height: 1.1;
-    .title-line {
-      background-color: color(grayscale, white);
-      padding-right: 5px;
+.main-container {
+  .block {
+    margin-bottom: map-get($sizes, "medium");
+    &.block-fluid {
+      width: 100vw;
+      margin-left: 50% !important;
+      transform: translateX(-50vw);
     }
-    .line {
-      display: block;
-      height: 1px;
-      position: relative;
-      width: calc( 100% - 50px);
-      bottom: 0.5em;
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
-      z-index: -1;
+    .block-title {
+      color: color(grayscale, gray-14);
+      padding-right: map-get($sizes, "half");
+      font-size: map-get($sizes, "base");
+      text-transform: uppercase;
+      line-height: 1.1;
+      .title-line {
+        background-color: color(grayscale, white);
+        padding-right: 5px;
+      }
+      .line {
+        display: block;
+        height: 1px;
+        position: relative;
+        width: calc( 100% - 50px);
+        bottom: 0.5em;
+        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+        z-index: -1;
+      }
     }
-  }
-  .view-brands {
-    .views-field-field-image {
-/*      border: 1px solid color(secondary, light);
-      background-color: color(background, color-6);*/
-      img{
-        margin: auto;
+    .view-brands {
+      .views-field-field-image {
+  /*      border: 1px solid color(secondary, light);
+        background-color: color(background, color-6);*/
+        img{
+          margin: auto;
+        }
+      }
+    }
+    &.views-exposed-form {
+      .block-title {
+        .title-line {
+          background-color: transparent;
+        }
       }
     }
   }
