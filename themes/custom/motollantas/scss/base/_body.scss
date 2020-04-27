@@ -752,23 +752,23 @@ ol{
     transform: translateX(-50vw);
   }
   .block-title {
-    background-color: color(grayscale, white);
     color: color(grayscale, gray-14);
     padding-right: map-get($sizes, "half");
     font-size: map-get($sizes, "base");
     text-transform: uppercase;
     line-height: 1.1;
+    .title-line {
+      background-color: color(grayscale, white);
+    }
     .line {
       display: block;
       height: 1px;
       position: relative;
       width: calc( 100% - 50px);
-      left: 77px;
-      bottom: -0.5em;
+      bottom: 0.5em;
       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
       z-index: 1;
-      content: '';
     }
   }
 }
