@@ -14,6 +14,15 @@
           infinite: true
         });
       });
+      $(".slick-6items .view-content", context).once('slider-6items').each(function () {
+        $(this).slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+          slidesToShow: 6,
+          slidesToScroll: 1
+        });
+      });
     }
   };
   
