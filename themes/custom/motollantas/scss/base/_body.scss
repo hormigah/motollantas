@@ -267,6 +267,10 @@ ol{
     border: 1px solid color(secondary, light);
     background-color: color(background, color-6);
     padding: map-get($sizes, "tiny") map-get($sizes, "skinny");
+    .title-line {
+      background-color: transparent;
+      
+    }
   }
   form {
     padding: map-get($sizes, "small") map-get($sizes, "small") 0;
