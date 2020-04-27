@@ -759,6 +759,7 @@ ol{
     line-height: 1.1;
     .title-line {
       background-color: color(grayscale, white);
+      padding-right: 5px;
     }
     .line {
       display: block;
@@ -768,7 +769,7 @@ ol{
       bottom: 0.5em;
       background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
-      z-index: 1;
+      z-index: -1;
     }
   }
 }
