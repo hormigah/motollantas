@@ -22,7 +22,7 @@
     li{
         display: inline-block;
         list-style: none;
-        button{
+        button {
             background: color(grayscale, black);
             border-radius: 100%;
             display: inline-block;
@@ -32,11 +32,22 @@
             width: 14px;
             z-index: 99;
         }
-        &.slick-active{
-            button{
+        &.slick-active {
+            button {
                 background: color(grayscale, gray-4);
             }
         }
+    }
+  }
+}
+.slick-6items {
+  .slick-dots {
+    bottom: -30px;
+    li{
+      button {
+        height: 8px;
+        width: 8px;
+      }
     }
   }
 }

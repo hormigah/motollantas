@@ -1607,6 +1607,17 @@ a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hove
   background: #999999;
 }
 
+/* line 44, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-6items .slick-dots {
+  bottom: -30px;
+}
+
+/* line 47, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_slide.scss */
+.slick-6items .slick-dots li button {
+  height: 8px;
+  width: 8px;
+}
+
 /* line 2, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/components/_header.scss */
 header.navbar-default {
   background-color: #ffc100;
