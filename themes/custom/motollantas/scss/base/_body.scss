@@ -758,7 +758,7 @@ ol{
     font-size: map-get($sizes, "base");
     text-transform: uppercase;
     line-height: 1.1;
-    &:before {
+    .line {
       display: block;
       height: 1px;
       position: relative;

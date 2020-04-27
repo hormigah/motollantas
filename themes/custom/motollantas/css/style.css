@@ -1042,7 +1042,7 @@ ol li:before {
 }
 
 /* line 761, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
-.block .block-title:before {
+.block .block-title .line {
   display: block;
   height: 1px;
   position: relative;
