@@ -721,16 +721,18 @@ ol{
 }
 .field--name-field-paragraphs-imgtd {
   .fields {
-    position: absolute;
-    top: 0;
-    margin: map-get($sizes, "medium") auto 0;
-    text-align: center;
+    position: relative;
+    .fields-wrapper {
+      position: absolute;
+      top: map-get($sizes, "large");
+      text-align: center;
+    }
     .field--name-field-title {
       font-size: map-get($sizes, "large");
       line-height: 1;
       font-weight: 600;
       text-transform: uppercase;
-      margin: 0 0 map-get($sizes, "base");
+      margin: 0 0 map-get($sizes, "medium");
     }
     .field--name-field-description {
       font-weight: 300;
@@ -738,11 +740,37 @@ ol{
       line-height: 1;
     }
   }
+  .field--name-field-image {
+    height: 350px;
+  }
 }
-.block-fluid {
-  width: 100vw;
-  margin-left: 50% !important;
-  transform: translateX(-50vw);
+
+.block {
+  &.block-fluid {
+    width: 100vw;
+    margin-left: 50% !important;
+    transform: translateX(-50vw);
+  }
+  .block-title {
+    background-color: color(grayscale, white);
+    color: color(grayscale, gray-14);
+    padding-right: map-get($sizes, "half");
+    font-size: map-get($sizes, "base");
+    text-transform: uppercase;
+    line-height: 1.1;
+    &:before {
+      display: block;
+      height: 1px;
+      position: relative;
+      width: calc( 100% - 50px);
+      left: 77px;
+      bottom: -0.5em;
+      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+      z-index: 1;
+      content: '';
+    }
+  }
 }
 
 @include mq-min(sm) {
