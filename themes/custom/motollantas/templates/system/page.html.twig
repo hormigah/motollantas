@@ -156,24 +156,6 @@
   </div>
 {% endblock %}
 
-{# Content Full #}
-{% if page.content_full %}
-  {% block content_full %}
-    <div class="content-full">
-      {{ page.content_full }}
-    </div>
-  {% endblock %}
-{% endif %}
-
-{# Content Bottom #}
-{% if page.content_bottom %}
-  {% block content_bottom %}
-    <div class="content-bottom {{ container }}">
-      {{ page.content_bottom }}
-    </div>
-  {% endblock %}
-{% endif %}
-
 {% if page.footer %}
   {% block footer %}
     <footer class="footer" role="contentinfo">
