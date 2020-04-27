@@ -512,14 +512,14 @@ ol li:before {
 
 /* line 337, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-phone-company .views-field-field-phone {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /* line 339, ../../../../Documents/Projects/MotoLlantas/SourceCodePantheon/themes/custom/motollantas/scss/base/_body.scss */
 .view-phone-company .views-field-field-phone:before {
   content: "\f095";
   font: normal normal normal 12px/1 FontAwesome;
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-right: 5px;
   color: #252525;
 }

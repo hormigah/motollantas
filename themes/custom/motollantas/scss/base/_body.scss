@@ -335,11 +335,11 @@ ol{
 }
 .view-phone-company {
   .views-field-field-phone {
-    font-size: map-get($sizes, "small");
+    font-size: map-get($sizes, "base");
     &:before {
       content: "\f095";
       font: normal normal normal 12px/1 FontAwesome;
-      font-size: map-get($sizes, "small");
+      font-size: map-get($sizes, "base");
       margin-right: 5px;
       color: color(background, color-11);
     }
