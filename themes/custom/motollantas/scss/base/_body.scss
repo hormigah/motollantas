@@ -776,6 +776,15 @@ ol{
       z-index: -1;
     }
   }
+  .view-brands {
+    .views-field-field-image {
+/*      border: 1px solid color(secondary, light);
+      background-color: color(background, color-6);*/
+      img{
+        margin: auto;
+      }
+    }
+  }
 }
 
 @include mq-min(sm) {
