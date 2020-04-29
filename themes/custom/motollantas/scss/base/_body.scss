@@ -130,6 +130,7 @@ ol{
   }
   .field--name-field-information {
     margin-left: map-get($sizes, "thumb");
+    color: color(grayscale, white);
   }
 }
 .paragraph--type--phone-information {
@@ -146,6 +147,7 @@ ol{
   }
   .field--name-field-information {
     margin-left: map-get($sizes, "thumb");
+    color: color(grayscale, white);
   }
 }
 .field--name-field-location {
