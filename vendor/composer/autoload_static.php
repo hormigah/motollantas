@@ -27,10 +27,6 @@ class ComposerStaticInitce58b5d98b41b71861b22b5cdcf13ed1
     );
 
     public static $prefixLengthsPsr4 = array (
-        'l' => 
-        array (
-            'libphonenumber\\' => 15,
-        ),
         'Z' => 
         array (
             'Zend\\Stdlib\\' => 12,
@@ -82,7 +78,6 @@ class ComposerStaticInitce58b5d98b41b71861b22b5cdcf13ed1
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
-            'Giggsey\\Locale\\' => 15,
         ),
         'E' => 
         array (
@@ -116,10 +111,6 @@ class ComposerStaticInitce58b5d98b41b71861b22b5cdcf13ed1
     );
 
     public static $prefixDirsPsr4 = array (
-        'libphonenumber\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
-        ),
         'Zend\\Stdlib\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
@@ -255,10 +246,6 @@ class ComposerStaticInitce58b5d98b41b71861b22b5cdcf13ed1
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-        ),
-        'Giggsey\\Locale\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
