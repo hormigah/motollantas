@@ -323,6 +323,16 @@ ol{
     }
   }
 }
+
+.fa-shopping-cart {
+  margin-top: 5px;
+  &:before {
+    font-size: map-get($sizes, "thumb");
+  }
+}
+.commerce-cart-block--summary__label {
+  font-size: map-get($sizes, "thumb");
+}
 .cart-flyout {
   .cart-block--link__expand {
     position: relative;
