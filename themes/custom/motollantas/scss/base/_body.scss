@@ -726,7 +726,8 @@ ol{
     .fields-wrapper {
       position: absolute;
       top: map-get($sizes, "large");
-      text-align: center;
+      width: 100%;
+      color: color(grayscale, white);
     }
     .field--name-field-title {
       font-size: map-get($sizes, "large");
@@ -734,11 +735,13 @@ ol{
       font-weight: 600;
       text-transform: uppercase;
       margin: 0 0 map-get($sizes, "medium");
+      text-align: center;
     }
     .field--name-field-description {
       font-weight: 300;
       font-size: map-get($sizes, "half");
       line-height: 1;
+      text-align: center;
     }
   }
   .field--name-field-image {
