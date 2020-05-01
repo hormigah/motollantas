@@ -81,6 +81,7 @@ $colors: (
     color-12  : $backgroundColor-12,
     color-13  : $backgroundColor-13,
     color-14  : $backgroundColor-14,
+    color-15  : $backgroundColor-15,
    )
 );
 
@@ -98,7 +99,8 @@ $sizes: (
    medium : 2.25rem, // 36px
    large  : 3rem,    // 48px
    xlarge : 3.5rem,  // 56px
-   huge   : 4rem     // 64px
+   huge   : 4rem,     // 64px
+   xhuge  : 4.5rem     // 64px
 );
 
 // ==========================================================================

@@ -810,6 +810,47 @@ ol{
     height: 350px;
   }
 }
+.paragraph--type-customer-say {
+  .bs-region--top {
+    .triangle-down {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid color(background, color-15);
+      margin: 0 0 0 17px;
+    }
+  }
+  .field--name-field-description {
+    background: color(background, color-15);
+    border: 0;
+    color: color(grayscale, white);
+    font-family: Georgia, serif;
+    font-style: italic;
+    padding: 10px 50px;
+    position: relative;
+    &:before {
+      left: 10px;
+      top: 0;
+      color: color(grayscale, white);
+      content: "“";
+      font-size: map-get($sizes, "xhuge");
+      font-style: normal;
+      line-height: 1;
+      position: absolute;
+    }
+    &:after {
+      color: color(grayscale, white);
+      content: "”";
+      font-size: map-get($sizes, "xhuge");
+      font-style: normal;
+      line-height: 1;
+      position: absolute;
+      bottom: -0.5em;
+      right: 10px;
+    }
+  }
+}
 .main-container {
   .block {
     margin-bottom: map-get($sizes, "medium");
