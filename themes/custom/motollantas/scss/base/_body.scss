@@ -692,6 +692,28 @@ ol{
     border: 1px solid color(secondary, light);
     padding: 2px;
   }
+  &.node--view-mode-slide {
+    .field--name-dynamic-token-fieldnode-fecha-dia-mes {
+      float: left;
+      margin-right: 5px;
+      .day {
+        font-size: map-get($sizes, "small");
+      }
+      .month {
+        font-size: map-get($sizes, "tiny");
+      }
+    }
+    .field--name-node-title {
+      h3 {
+        font-size: map-get($sizes, "small");
+        line-height: 1.5;
+      }
+    }
+    .field--name-body {
+      clear: both;
+      padding-top: map-get($sizes, "thumb");
+    }
+  }
 }
 .view-blog-recientes {
   .views-field-field-images {

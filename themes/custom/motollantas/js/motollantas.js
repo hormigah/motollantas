@@ -23,6 +23,13 @@
           slidesToScroll: 6
         });
       });
+      $(".slick-1item .view-content", context).once('slider-1item').each(function () {
+        $(this).slick({
+          dots: true,
+          arrows: false,
+          infinite: true,
+        });
+      });
     }
   };
   
