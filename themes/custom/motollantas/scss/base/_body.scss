@@ -821,6 +821,14 @@ ol{
       margin: 0 0 0 17px;
     }
   }
+  .bs-region--left {
+    margin-top: 4px;
+    padding-right: 5px;
+  }
+  .bs-region--right {
+    margin-top: 4px;
+    padding-left: 5px;
+  }
   .field--name-field-description {
     background: color(background, color-15);
     border: 0;
@@ -849,6 +857,18 @@ ol{
       bottom: -0.5em;
       right: 10px;
     }
+  }
+  .field--name-field-image {
+    border: 1px solid color(secondary, light);
+    padding: 2px;
+  }
+  .field--name-field-title {
+    color: #111;
+    padding-top: 15px;
+    text-transform: uppercase;
+  }
+  .field--name-field-subtitle {
+    font-size: map-get($sizes, "tiny");
   }
 }
 .main-container {
