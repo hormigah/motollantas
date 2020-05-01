@@ -330,8 +330,28 @@ ol{
     font-size: map-get($sizes, "thumb");
   }
 }
-.commerce-cart-block--summary__label {
-  font-size: map-get($sizes, "thumb");
+.commerce-cart-block {
+  .commerce-cart-block--link {
+    position: relative;
+    .fa-shopping-bag {
+      font-size: map-get($sizes, "medium");
+      color: color(background, color-11);
+      margin-top: 5px;
+    }
+    .commerce-cart-block--summary__label {
+      font-size: map-get($sizes, "thumb");
+      position: absolute;
+      width: 78%;
+      text-align: center;
+      top: 50%;
+      left: 0;
+      display: block;
+      line-height: 1;
+      color: color(grayscale, white);
+      background-color: color(background, color-11);
+      margin: -1px 4px;
+    }
+  }
 }
 .cart-flyout {
   .cart-block--link__expand {
