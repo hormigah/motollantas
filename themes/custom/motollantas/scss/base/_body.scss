@@ -313,6 +313,16 @@ ol{
     }
   }
 }
+.button--add-to-cart {
+  &.btn {
+    &.button--primary {
+      color: color(grayscale, white);      
+      background-color: color(background, color-3);
+      border-color: color(background, color-3) color(background, color-3) color(background, color-3);
+      margin-right: 0;
+    }
+  }
+}
 .cart-flyout {
   .cart-block--link__expand {
     position: relative;
