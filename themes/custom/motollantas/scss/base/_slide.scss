@@ -51,3 +51,14 @@
     }
   }
 }
+.slick-1item {
+  .slick-dots {
+    bottom: 0;
+    li{
+      button {
+        height: 5px;
+        width: 5px;
+      }
+    }
+  }
+}
