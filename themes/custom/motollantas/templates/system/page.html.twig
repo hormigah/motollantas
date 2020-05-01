@@ -141,7 +141,15 @@
         {% block content %}
           <a id="main-content"></a>
           {{ page.content }}
-        {% endblock %}
+        {% endblock %}        
+        
+        {# Content Bottom #}
+        {% if page.content_bottom %}
+          {% block content_bottom %}
+            <div class="content-bottom">{{ page.content_bottom }}</div>
+          {% endblock %}
+        {% endif %}
+
       </section>
 
       {# Sidebar Second #}
