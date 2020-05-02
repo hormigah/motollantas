@@ -81,5 +81,15 @@
   }
   a {
     color: color(grayscale, white);
+  }  
+  .paragraph--type--location-information {
+    .field--name-field-information {
+      color: color(grayscale, white);
+    }
+  }
+  .paragraph--type--contact-information {
+    .field--name-field-information {
+      color: color(grayscale, white);
+    }
   }
 }
