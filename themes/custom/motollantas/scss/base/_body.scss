@@ -68,10 +68,6 @@ ol{
 .name.navbar-brand {
   display: none;
 }
-.main-container {
-  font-size: map-get($sizes, small );
-  margin-top: map-get($sizes, half );
-}
 .container-header {
   background-color: color(grayscale, black);
   .breadcrumb {
@@ -814,9 +810,6 @@ ol{
       }
     }
   }
-  .field--name-field-image {
-    height: 350px;
-  }
 }
 .paragraph--type-customer-say {
   .bs-region--top {
@@ -880,8 +873,10 @@ ol{
   }
 }
 .main-container {
+  font-size: map-get($sizes, small );
+  margin-top: map-get($sizes, half );
   .block {
-    margin-bottom: map-get($sizes, "medium");
+    margin-bottom: map-get($sizes, "base");
     &.block-fluid {
       width: 100vw;
       margin-left: 50% !important;
@@ -910,8 +905,6 @@ ol{
     }
     .view-brands {
       .views-field-field-image {
-  /*      border: 1px solid color(secondary, light);
-        background-color: color(background, color-6);*/
         img{
           margin: auto;
         }
@@ -977,6 +970,11 @@ ol{
           margin-bottom: map-get($sizes, "base");
         }
       }
+    }
+  }
+  .main-container {
+    .block {
+      margin-bottom: map-get($sizes, "medium");
     }
   }
 }

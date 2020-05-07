@@ -4,6 +4,9 @@
   padding: 10px 0 0;
   color: color(background, color-4);
   font-size: map-get($sizes, small );
+  .block {
+    margin-bottom: map-get($sizes, half );
+  }
   .footer-ribbon {
     background: color(background, color-3);
     position: absolute;
@@ -90,6 +93,15 @@
   .paragraph--type--contact-information {
     .field--name-field-information {
       color: color(grayscale, white);
+    }
+  }
+}
+
+
+@include mq-min(sm) {
+  .footer {
+    .block {
+      margin-bottom: 0;
     }
   }
 }
