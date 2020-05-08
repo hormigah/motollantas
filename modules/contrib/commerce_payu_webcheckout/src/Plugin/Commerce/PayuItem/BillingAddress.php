@@ -27,16 +27,22 @@ class BillingAddress extends PayuItemBase {
   public function issueValue(PaymentInterface $payment) {
     $order = $payment->getOrder();
     $billing_profile = $order->getBillingProfile();
-    $address = $billing_profile->get('address')->getValue();
-    $address = reset($address);
-    $address_line = [];
-    if ($address['address_line1']) {
-      $address_line[] = $address['address_line1'];
+    
+    if ($billing_profile instanceof \Drupal\profile\Entity\Profile) {
+      $address = $billing_profile->get('address')->getValue();
+      $address = reset($address);
+      $address_line = [];
+      if ($address['address_line1']) {
+        $address_line[] = $address['address_line1'];
+      }
+      if ($address['address_line2']) {
+        $address_line[] = $address['address_line2'];
+      }
+      return implode(' ', $address_line);
     }
-    if ($address['address_line2']) {
-      $address_line[] = $address['address_line2'];
+    else {
+      return '';
     }
-    return implode(' ', $address_line);
   }
 
   /**

@@ -25,19 +25,24 @@ class BuyerFullName extends PayuItemBase {
   public function issueValue(PaymentInterface $payment) {
     $order = $payment->getOrder();
     $billing_profile = $order->getBillingProfile();
-    $address = $billing_profile->get('address')->getValue();
-    $address = reset($address);
-    $name = [];
-    if ($address['given_name']) {
-      $name[] = $address['given_name'];
+    if ($billing_profile instanceof \Drupal\profile\Entity\Profile) {
+      $address = $billing_profile->get('address')->getValue();
+      $address = reset($address);
+      $name = [];
+      if ($address['given_name']) {
+        $name[] = $address['given_name'];
+      }
+      if ($address['additional_name']) {
+        $name[] = $address['additional_name'];
+      }
+      if ($address['family_name']) {
+        $name[] = $address['family_name'];
+      }
+      return implode(' ', $name);
     }
-    if ($address['additional_name']) {
-      $name[] = $address['additional_name'];
+    else {
+      return '';
     }
-    if ($address['family_name']) {
-      $name[] = $address['family_name'];
-    }
-    return implode(' ', $name);
   }
 
 }

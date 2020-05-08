@@ -1,7 +1,0 @@
-configuration_helper:
-  title: 'Configuration helper'
-  js:
-    js/configuration.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal

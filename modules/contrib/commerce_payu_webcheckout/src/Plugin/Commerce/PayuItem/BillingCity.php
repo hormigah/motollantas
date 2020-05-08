@@ -28,9 +28,14 @@ class BillingCity extends PayuItemBase {
   public function issueValue(PaymentInterface $payment) {
     $order = $payment->getOrder();
     $billing_profile = $order->getBillingProfile();
-    $address = $billing_profile->get('address')->getValue();
-    $address = reset($address);
-    return isset($address['locality']) ? $address['locality'] : '';
+    if ($billing_profile instanceof \Drupal\profile\Entity\Profile) {
+      $address = $billing_profile->get('address')->getValue();
+      $address = reset($address);
+      return isset($address['locality']) ? $address['locality'] : '';
+    }
+    else {
+      return '';
+    }
   }
 
   /**
