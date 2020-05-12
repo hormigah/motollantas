@@ -92,6 +92,7 @@ class PayuWebcheckoutPaymentForm extends PaymentOffsiteForm implements Container
         }
       }
     }
+    
     return $data;
   }
 

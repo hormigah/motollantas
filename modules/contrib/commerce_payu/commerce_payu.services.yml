@@ -1,3 +1,0 @@
-services:
-  commerce_payu.notification_helper:
-    class: Drupal\commerce_payu\PayuNotificationHelper
