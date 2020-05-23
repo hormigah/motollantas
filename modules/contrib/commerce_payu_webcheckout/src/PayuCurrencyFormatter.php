@@ -49,4 +49,20 @@ class PayuCurrencyFormatter implements PayuCurrencyFormatterInterface {
     return $num;
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function payuFormatHash($number) {
+    $options = [
+      'locale' => self::DEFAULT_LOCALE,
+      'minimum_fraction_digits' => 1,
+      'maximum_fraction_digits' => 1,
+      'style' => 'decimal',
+      'use_grouping' => FALSE,
+    ];
+    $num = $this->numberFormatter->parse($number, ['locale' => self::DEFAULT_LOCALE]);
+    $num = $this->numberFormatter->format($num, $options);
+    return $num;
+  }
+
 }
