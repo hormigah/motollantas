@@ -48,6 +48,10 @@ class CheckSignature implements AccessInterface {
    */
   public function access(Request $request, AccountInterface $account) {
     $hash_properties = $request->get('extra1');
+    
+    \Drupal::logger('payu')->debug('data: %data', [
+      '%data' => print_r($hash_properties, true)
+    ]);
     if (!$hash_properties) {
       // Do not act if payload in extra 1 is not set.
       return AccessResult::allowed()->setCacheMaxAge(0);
@@ -71,8 +75,8 @@ class CheckSignature implements AccessInterface {
     $hash = reset($hash);
 
     // Obtain both the state and signature from request.
-    $state = $request->get('state_pol');
-    $signature = $request->get('sign');
+    $state = $request->get('transactionState');
+    $signature = $request->get('signature');
 
     // Calculate a new hash and compare it.
     $hash->setComponent('state', $state);

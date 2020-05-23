@@ -1,0 +1,12 @@
+type: module
+name: Portal
+description: Provides a user interface for portal Web Site.
+core_version_requirement: ^8.8 || ^9
+
+dependencies:
+  - commerce_simple_stock
+  
+# Information added by Drupal.org packaging script on 2020-04-26
+version: '8.x-1.0'
+project: 'portal'
+datestamp: 1587893591
