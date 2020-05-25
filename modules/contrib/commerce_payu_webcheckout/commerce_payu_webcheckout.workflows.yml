@@ -1,0 +1,26 @@
+commerce_payu_webcheckout_validation:
+  id: commerce_payu_webcheckout_validation
+  group: commerce_order
+  label: 'Default Portal'
+  states:
+    draft:
+      label: Draft
+    validation:
+      label: Pending
+    completed:
+      label: Completed
+    canceled:
+      label: Canceled
+  transitions:
+    place:
+      label: 'Place order'
+      from: [draft, validation]
+      to: completed
+    process:
+      label: 'Payment validation'
+      from: [draft]
+      to: validation
+    cancel:
+      label: 'Cancel order'
+      from: [draft, validation]
+      to:   canceled

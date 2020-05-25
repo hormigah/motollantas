@@ -89,7 +89,7 @@ class HashPresaveEventSubscriber implements EventSubscriberInterface {
 
     // Get the total price.
     $total_price = $order->getTotalPrice();
-    $hash->setComponent('amount', $this->formatter->payuFormat($total_price->getNumber()));
+    $hash->setComponent('amount', $this->formatter->payuFormatHash($total_price->getNumber()));
 
     // Set the currency.
     $hash->setComponent('currency', $total_price->getCurrencyCode());

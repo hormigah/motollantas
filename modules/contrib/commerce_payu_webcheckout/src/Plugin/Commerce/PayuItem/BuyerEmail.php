@@ -35,7 +35,13 @@ class BuyerEmail extends PayuItemBase {
    * {@inheritdoc}
    */
   public function consumeValue(Request $request) {
-    return $request->get($this->getConsumerId());
+    $consumerId = $this->getConsumerId();
+    $consumeValue = $request->get($consumerId);
+    if(empty($consumeValue)) {
+      $consumeValue = $request->query->get($consumerId);
+    }
+    
+    return $consumeValue;
   }
 
 }

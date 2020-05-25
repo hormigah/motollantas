@@ -43,7 +43,7 @@ class PaymentParser implements PaymentParserInterface {
    * {@inheritdoc}
    */
   public function isSuccessful() {
-    $code = $this->currentRequest->get('state_pol');
+    $code = $this->getRemoteState();
     return (int) $code == self::SUCCESSFUL_PAYMENT;
   }
 
@@ -101,21 +101,47 @@ class PaymentParser implements PaymentParserInterface {
       'PENDING_AWAITING_PSE_CONFIRMATION' => $this->t('Pending confirmation from PSE'),
       'PENDING_NOTIFYING_ENTITY' => $this->t('Receipt of payment generated. Pending payment'),
     ];
-    return isset($messages[$this->getRemoteState()]) ? $messages[$this->getRemoteState()] : $this->t('Unknown error');
+    
+    return isset($messages[$this->getLapResponseCode()]) ? $messages[$this->getLapResponseCode()] : $this->t('Unknown error');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getLapResponseCode() {
+    $lapResponseCode = $this->currentRequest->get('lapResponseCode');
+    if(empty($lapResponseCode)) {
+      $lapResponseCode = $this->currentRequest->query->get('lapResponseCode');
+    }
+    return $lapResponseCode;
   }
 
   /**
    * {@inheritdoc}
    */
   public function getRemoteState() {
-    return $this->currentRequest->get('response_message_pol');
+    // por POST se recibe en state_pol
+    $transactionState = $this->currentRequest->get('state_pol');
+    dpm($transactionState, '$transactionState///');
+    if(empty($transactionState)) {
+      // por GET se recibe en transactionState
+      $transactionState = $this->currentRequest->query->get('transactionState');
+      dpm($transactionState, '$transactionState2///');
+    }
+    
+    return $transactionState;
   }
 
   /**
    * {@inheritdoc}
    */
   public function getRemoteId() {
-    return $this->currentRequest->get('reference_pol');
+    $reference_pol = $this->currentRequest->get('reference_pol');
+    if(empty($reference_pol)) {
+      $reference_pol = $this->currentRequest->query->get('reference_pol');
+    }
+    
+    return $reference_pol;
   }
 
   /**
@@ -141,24 +167,20 @@ class PaymentParser implements PaymentParserInterface {
    */
   public function getState() {
     switch ($this->getRemoteState()) {
-      case 'APPROVED':
+      case 4:
         $state = 'completed';
         break;
-
-      case 'PENDING_TRANSACTION_REVIEW':
-      case 'PENDING_TRANSACTION_CONFIRMATION':
-      case 'PENDING_TRANSACTION_TRANSMISSION':
-      case 'PENDING_PAYMENT_IN_ENTITY':
-      case 'PENDING_PAYMENT_IN_BANK':
-      case 'PENDING_SENT_TO_FINANCIAL_ENTITY':
-      case 'PENDING_AWAITING_PSE_CONFIRMATION':
-      case 'PENDING_NOTIFYING_ENTITY':
+      case 6:
+      case 5:
+        $state = 'canceled';
+        break;
+      case 7:
         $state = 'pending';
         break;
-
       default:
         $state = 'voided';
     }
+    
     return $state;
   }
 

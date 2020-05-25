@@ -2,6 +2,7 @@
 
 namespace Drupal\commerce_payu_webcheckout\Plugin\Commerce\PaymentGateway;
 
+use Drupal\commerce_order\Entity\OrderInterface;
 use Drupal\commerce_payment\PaymentMethodTypeManager;
 use Drupal\commerce_payment\PaymentTypeManager;
 use Drupal\commerce_payment\Plugin\Commerce\PaymentGateway\OffsitePaymentGatewayBase;
@@ -15,6 +16,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Render\RendererInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
  * Provides the PayU payment gateway.
@@ -39,8 +41,8 @@ class PayuWebcheckout extends OffsitePaymentGatewayBase implements ContainerFact
   const TEST_API_KEY = '4Vj8eK4rloUd272L48hsrarnUA';
   const TEST_MERCHANT_ID = '508029';
   const TEST_ACCOUNT_ID = '512321';
-  const TEST_GATEWAY_URL = 'https://sandbox.gateway.payulatam.com/ppp-web-gateway/';
-  const PROD_GATEWAY_URL = 'https://gateway.payulatam.com/ppp-web-gateway/';
+  const TEST_GATEWAY_URL = 'https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/';
+  const PROD_GATEWAY_URL = 'https://checkout.payulatam.com/ppp-web-gateway-payu/';
 
   /**
    * Drupal module handler service.
@@ -134,6 +136,83 @@ class PayuWebcheckout extends OffsitePaymentGatewayBase implements ContainerFact
     ];
     return $this->renderer->render($content);
   }
+  
+  /**
+   * {@inheritdoc}
+   */
+  public function onCancel(OrderInterface $order, Request $request) {
+    $this->messenger()->addMessage($this->paymentParser->getMessage());
+    
+    if (!$order->getOrderNumber()) {
+      $order_type_storage = $this->entityTypeManager->getStorage('commerce_order_type');
+      /** @var \Drupal\commerce_order\Entity\OrderTypeInterface $order_type */
+      $order_type = $order_type_storage->load($order->bundle());
+      /** @var \Drupal\commerce_number_pattern\Entity\NumberPatternInterface $number_pattern */
+      $number_pattern = $order_type->getNumberPattern();
+      if ($number_pattern) {
+        $order_number = $number_pattern->getPlugin()->generate($order);
+      }
+      else {
+        $order_number = $order->id();
+      }
+
+      $order->setOrderNumber($order_number);
+    }
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function onReturn(OrderInterface $order, Request $request) {
+    
+    $hash_properties = $request->get('extra1');
+    if(empty($hash_properties)) {
+      \Drupal::logger('payu')->debug('$hash_properties vacia en onReturn');
+    }
+    else {
+      $hash_properties = unserialize($hash_properties);
+    }
+    
+    $data = [
+      'hash_properties' => $hash_properties,
+      'getState' => $this->paymentParser->getState(),
+    ];
+    
+    switch ($this->paymentParser->getState()) {
+      case 'pending':
+        $order->set('cart', FALSE);
+        $transition = $order->getState()->getWorkflow()->getTransition('process');
+        $order->getState()->applyTransition($transition);
+        $order->save();
+        
+        $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
+        $payment = $payment_storage->create([
+          'state' => $this->paymentParser->getState(),
+          'amount' => $order->getTotalPrice(),
+          'payment_gateway' => $this->entityId,
+          'order_id' => $order->id(),
+          'remote_id' => $this->paymentParser->getRemoteId(),
+          'remote_state' => $this->paymentParser->getRemoteState(),
+        ]);
+        $payment->save();        
+        break;
+      case 'canceled':
+        $this->onCancel($order, $request);
+        break;
+      default:
+        \Drupal::logger('payu')->debug('data onReturn getState no procesado: %data', [
+          '%data' => print_r($data, true),
+        ]);
+        break;
+    }
+    
+    $this->messenger()->addMessage($this->paymentParser->getMessage());
+    $data['message'] = $this->paymentParser->getMessage();
+    
+    \Drupal::logger('payu')->debug('data onReturn: %data', [
+      '%data' => print_r($data, true),
+    ]);
+  }
 
   /**
    * {@inheritdoc}
@@ -141,18 +220,43 @@ class PayuWebcheckout extends OffsitePaymentGatewayBase implements ContainerFact
   public function onNotify(Request $request) {
     // We catch the order.
     $hash_properties = $request->get('extra1');
-    $hash_properties = unserialize($hash_properties);
+    if(empty($hash_properties)) {
+      \Drupal::logger('payu')->debug('$hash_properties vacia en onNotify');
+    }
+    else {
+      $hash_properties = unserialize($hash_properties);
+    }
+    
     $order = $this->entityTypeManager->getStorage('commerce_order')->load($hash_properties['order_id']);
-
-    // Make sure the order is not in the cart now.
-    $order->set('cart', FALSE);
-    $order->save();
-
-    // Only move the order to the next step if payment is successful.
-    if ($this->paymentParser->isSuccessful()) {
-      $transition = $order->getState()->getWorkflow()->getTransition('place');
-      $order->getState()->applyTransition($transition);
-      $order->save();
+    
+    $data = [
+      'hash_properties' => $hash_properties,
+      'getState' => $this->paymentParser->getState(),
+      'remote_id' => $this->paymentParser->getRemoteId(),
+      'remote_state' => $this->paymentParser->getRemoteState(),
+    ];
+    
+    switch ($this->paymentParser->getState()) {
+      case 'completed':
+        $order->set('cart', FALSE);
+        $transition = $order->getState()->getWorkflow()->getTransition('place');
+        $order->getState()->applyTransition($transition);
+        $order->save();
+        break;
+      case 'canceled':
+        $order->set('cart', FALSE);
+        $transition = $order->getState()->getWorkflow()->getTransition('cancel');
+        $order->getState()->applyTransition($transition);
+        if(empty($order->getPlacedTime())) {
+          $order->setPlacedTime($this->time->getRequestTime());
+        }
+        $order->save();
+        break;
+      default:
+        \Drupal::logger('payu')->debug('data onNotify getState no procesado: %data', [
+          '%data' => print_r($data, true),
+        ]);
+        break;
     }
 
     // Create a payment regardless.
@@ -166,6 +270,7 @@ class PayuWebcheckout extends OffsitePaymentGatewayBase implements ContainerFact
       'remote_state' => $this->paymentParser->getRemoteState(),
     ]);
     $payment->save();
+    
   }
 
   /**
@@ -214,16 +319,6 @@ class PayuWebcheckout extends OffsitePaymentGatewayBase implements ContainerFact
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
-//    $form['collect_billing_information'] = [
-//      '#type' => 'checkbox',
-//      '#title' => $this->t('Collect billing information'),
-//      '#description' => $this->t('Before disabling, make sure you are not legally required to collect billing information.'),
-//      '#default_value' => $this->configuration['collect_billing_information'],
-//      // Merchants can disable collecting billing information only if the
-//      // payment gateway indicated that it doesn't require it.
-//      '#access' => !$this->pluginDefinition['requires_billing_information'],
-//    ];
-    
     $image_options = [];
     foreach (array_keys($this->payuImages()) as $image_key) {
       $image_options[$image_key] = ucfirst(str_replace('_', ' ', $image_key));

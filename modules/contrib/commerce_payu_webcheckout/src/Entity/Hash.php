@@ -42,6 +42,7 @@ class Hash extends ContentEntityBase implements ContentEntityInterface {
     foreach ($components as $component) {
       $values = array_merge($values, array_values($component));
     }
+    
     $hash = md5(implode('~', array_values($values)));
     $this->hash = $hash;
   }

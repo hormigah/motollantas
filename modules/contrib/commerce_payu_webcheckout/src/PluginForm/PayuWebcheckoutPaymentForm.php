@@ -141,6 +141,12 @@ class PayuWebcheckoutPaymentForm extends PaymentOffsiteForm implements Container
 
     // Add the hash to the data array.
     $data['signature'] = (string) $hash;
+    $data['responseUrl'] = $form['#return_url'];
+//    $data['cancel'] = $form['#cancel_url'];
+    
+    \Drupal::logger('payu')->debug('data: %data', [
+      '%data' => print_r($data, TRUE)
+    ]);
 
     // Build the redirection form.
     $form = $this->buildRedirectForm($form, $form_state, $redirect_url, $data, self::REDIRECT_POST);
