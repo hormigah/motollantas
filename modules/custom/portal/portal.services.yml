@@ -1,0 +1,5 @@
+services:
+  portal.route_subscriber_stock:
+    class: Drupal\portal\Routing\RouteSubscriberStock
+    tags:
+      - { name: event_subscriber }
