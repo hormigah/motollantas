@@ -919,6 +919,11 @@ ol{
     }
   }
 }
+.form-item-outofstock {
+  input {
+    text-align: center;
+  }
+}
 
 @include mq-min(sm) {
   .cart-flyout {
