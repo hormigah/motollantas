@@ -1,5 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home4/ayjgobmy/public_html/prueba/
+    - export DEPLOYPATH=/home4/ayjgobmy/public_html/motollantas/
+    - /bin/rm -d modules
+    - /bin/rm -d themes
     - /bin/cp -R * $DEPLOYPATH
