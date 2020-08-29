@@ -2,12 +2,14 @@
 
 namespace Drupal\fivestar;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\votingapi\VoteResultFunctionManager;
 use Drupal\Core\Entity\FieldableEntityInterface;
-use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 
 /**
- * Contains methods for managing votes.
+ * Contain methods for manage votes.
+ *
+ * @package Drupal\fivestar
  */
 class VoteManager {
 
@@ -19,30 +21,21 @@ class VoteManager {
   protected $entityTypeManager;
 
   /**
-   * The current user.
-   *
-   * @var \Drupal\Core\Session\AccountProxyInterface
-   */
-  protected $currentUser;
-
-  /**
    * The vote storage.
    *
-   * @var \Drupal\Core\Entity\EntityStorageInterface
+   * @var \Drupal\votingapi\Entity\Vote
    */
   protected $voteStorage;
+
 
   /**
    * Constructs a new VoteManager object.
    *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager.
-   * @param \Drupal\Core\Session\AccountProxyInterface $current_user
-   *   The current user.
+   * @param EntityTypeManagerInterface $entity_type_manager
+   * @param VoteResultFunctionManager $vote_result_manager
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, AccountProxyInterface $current_user) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
     $this->entityTypeManager = $entity_type_manager;
-    $this->currentUser = $current_user;
     $this->voteStorage = $entity_type_manager->getStorage('vote');
   }
 
@@ -50,8 +43,6 @@ class VoteManager {
    * Get vote types.
    *
    * @return array
-   *   An associative array with keys equal to the vote type machine ID and
-   *   values equal to the vote type human-readable label.
    */
   public function getVoteTypes() {
     $options = [];
@@ -67,15 +58,15 @@ class VoteManager {
   /**
    * Add vote.
    *
-   * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
+   * @param FieldableEntityInterface $entity
    * @param int $rating
    * @param string $vote_type
-   * @param int|null $uid
+   * @param int|NULL $uid
    *
-   * @return \Drupal\votingapi\Entity\Vote
+   * @retrn \Drupal\votingapi\Entity\Vote
    */
   public function addVote(FieldableEntityInterface $entity, $rating, $vote_type = 'vote', $uid = NULL) {
-    $uid = is_numeric($uid) ? $uid : $this->currentUser->id();
+    $uid = is_numeric($uid) ? $uid : \Drupal::currentUser()->id();
     $rating = ($rating > 100) ? 100 : $rating;
 
     $vote = $this->voteStorage->create(['type' => $vote_type]);
@@ -92,21 +83,21 @@ class VoteManager {
    * Delete vote.
    */
   public function deleteVote() {
+
   }
 
   /**
    * Get votes by criteria.
    *
    * @param array $criteria
-   *   Associative array of criteria. Keys are:
-   *   - entity_id: The entity id.
-   *   - entity_type: The entity type.
-   *   - type: Vote type.
-   *   - user_id: The user id.
-   *   - vote_source: The vote source.
+   *   $criteria['entity_id']
+   *   $criteria['entity_type']
+   *   $criteria['type'] Vote type.
+   *   $criteria['user_id']
+   *   $criteria['vote_source']
    *
    * @return array
-   *   Which contain vote ids.
+   *    Which contain vote ids.
    */
   public function getVotesByCriteria(array $criteria) {
     if (empty($criteria)) {

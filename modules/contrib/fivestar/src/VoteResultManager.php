@@ -2,11 +2,13 @@
 
 namespace Drupal\fivestar;
 
-use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\votingapi\VoteResultFunctionManager;
+use Drupal\Core\Entity\FieldableEntityInterface;
 
 /**
- * Contains methods for managing vote results.
+ * Contain methods for manage votes results.
+ *
+ * @package Drupal\fivestar
  */
 class VoteResultManager {
 
@@ -20,8 +22,7 @@ class VoteResultManager {
   /**
    * Constructs a new VoteResultManager object.
    *
-   * @param \Drupal\votingapi\VoteResultFunctionManager $vote_result_manager
-   *   The vote result manager.
+   * @param VoteResultFunctionManager $vote_result_manager
    */
   public function __construct(VoteResultFunctionManager $vote_result_manager) {
     $this->voteResultManager = $vote_result_manager;
@@ -30,9 +31,8 @@ class VoteResultManager {
   /**
    * Get votes for passed entity based on vote type.
    *
-   * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
+   * @param FieldableEntityInterface $entity
    * @param string $vote_type
-   *
    * @return array
    */
   public function getResultsByVoteType(FieldableEntityInterface $entity, $vote_type) {
@@ -47,8 +47,7 @@ class VoteResultManager {
   /**
    * Get all votes results for passed entity.
    *
-   * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
-   *
+   * @param FieldableEntityInterface $entity
    * @return array
    */
   public function getResults(FieldableEntityInterface $entity) {
@@ -64,11 +63,6 @@ class VoteResultManager {
    * Return default result collection.
    *
    * @return array
-   *   An associative array with keys:
-   *   - vote_sum: The sum of all votes.
-   *   - vote_user: The user's vote.
-   *   - vote_count: The number of votes.
-   *   - vote_average: The average of all votes.
    */
   public function getDefaultResults() {
     return [
@@ -82,7 +76,7 @@ class VoteResultManager {
   /**
    * Recalculate votes results.
    *
-   * @param \Drupal\Core\Entity\FieldableEntityInterface $entity
+   * @param FieldableEntityInterface $entity
    */
   public function recalculateResults(FieldableEntityInterface $entity) {
     $this->voteResultManager->recalculateResults(

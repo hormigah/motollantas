@@ -16,19 +16,20 @@ use Drupal\Core\Form\FormStateInterface;
  *   }
  * )
  */
-class SelectWidget extends FivestarWidgetBase {
+class SelectWidget extends FiveStartWidgetBase {
 
   /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $settings = $items[$delta]->getFieldDefinition()->getSettings();
+    $settings = $items[$delta]->getFieldDefinition()
+      ->getSettings();
 
     $options = [];
-    for ($star = 1; $star <= $settings['stars']; $star++) {
-      $this_value = ceil($star * 100 / $settings['stars']);
+    for ($i = 1; $i <= $settings['stars']; $i++) {
+      $this_value = ceil($i * 100 / $settings['stars']);
       $options[$this_value] = $this->t('Give @star/@count', [
-        '@star' => $star,
+        '@star' => $i,
         '@count' => $settings['stars'],
       ]);
     }

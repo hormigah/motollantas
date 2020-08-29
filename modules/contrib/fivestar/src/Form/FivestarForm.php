@@ -2,11 +2,9 @@
 
 namespace Drupal\fivestar\Form;
 
-use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormBase;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\fivestar\VoteResultManager;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Fivestar form.
@@ -14,41 +12,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class FivestarForm extends FormBase {
 
   /**
-   * The fivestar.vote_result_manager service.
-   *
-   * @var \Drupal\fivestar\VoteResultManager
-   */
-  protected $resultManager;
-
-  /**
    * Form counter.
    *
    * @var int
    */
-  protected static $formCounter = 0;
-
-  /**
-   * Creates a new object of this class.
-   */
-  public function __construct(VoteResultManager $result_manager) {
-    $this->resultManager = $result_manager;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container) {
-    return new static($container->get('fivestar.vote_result_manager'));
-  }
+  private static $form_counter = 0;
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    self::$formCounter += 1;
+    self::$form_counter += 1;
 
     // For correct submit work set unique name for every form in page.
-    return 'fivestar_form_' . self::$formCounter;
+    return 'fivestar_form_' . self::$form_counter;
   }
 
   /**
@@ -60,6 +37,7 @@ class FivestarForm extends FormBase {
     $field_definition = $context['field_definition'];
     $field_settings = $field_definition->getSettings();
     $field_name = $field_definition->getName();
+    $result_manager = \Drupal::service('fivestar.vote_result_manager');
     $voting_is_allowed = (bool) ($field_settings['rated_while'] == 'viewing');
 
     $form['vote'] = [
@@ -70,7 +48,7 @@ class FivestarForm extends FormBase {
       '#allow_ownvote' => $field_settings['allow_ownvote'],
       '#widget' => $context['display_settings'],
       '#default_value' => $entity->get($field_name)->rating,
-      '#values' => $this->resultManager->getResultsByVoteType($entity, $field_settings['vote_type']),
+      '#values' => $result_manager->getResultsByVoteType($entity, $field_settings['vote_type']),
       '#settings' => $context['display_settings'],
       '#show_static_result' => !$voting_is_allowed,
       '#attributes' => [
@@ -81,7 +59,6 @@ class FivestarForm extends FormBase {
     // Click on this element triggered from JS side.
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => $this->t('Rate'),
       '#ajax' => [
         'event' => 'click',
         'callback' => '::fivestarAjaxVote',
@@ -111,15 +88,21 @@ class FivestarForm extends FormBase {
   /**
    * {@inheritdoc}
    */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::validateForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $context = $form_state->get('context');
-
+    
     if (isset($context['entity'])) {
       $entity = $context['entity'];
       $fivestar_field_name = $context['field_definition']->getName();
       if ($entity->hasField($fivestar_field_name)) {
-        // For votingapi value will be save during save rating value to
-        // field storage.
+        // For votingapi value will be save during save rating value to field storage.
         $entity->set($fivestar_field_name, $form_state->getValue('vote'));
         $entity->save();
       }
@@ -127,5 +110,4 @@ class FivestarForm extends FormBase {
 
     $form_state->setRebuild(TRUE);
   }
-
 }
