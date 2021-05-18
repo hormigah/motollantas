@@ -62,21 +62,23 @@
       ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-        <div class="{{ container }}">
-          <div class="header-top">
+        <div class="">
+          <div class="header-top {{ container }}">
             <div class="navbar-header">
               {{ page.navigation }}
             </div>
             <div class="header-bottom">
-              {{ page.navigation_bottom }}
-              {% if page.navigation_collapsible %}
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                  <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-              {% endif %}
+              <div class="{{ container }}">
+                {{ page.navigation_bottom }}
+                {% if page.navigation_collapsible %}
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                {% endif %}
+              </div>
             </div>
           </div>
           {# Navigation (collapsible) #}
@@ -102,7 +104,7 @@
   {% endif %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
-      
+
       {# Sidebar First #}
       {% if page.sidebar_first %}
         {% block sidebar_first %}
@@ -141,8 +143,8 @@
         {% block content %}
           <a id="main-content"></a>
           {{ page.content }}
-        {% endblock %}        
-        
+        {% endblock %}
+
         {# Content Bottom #}
         {% if page.content_bottom %}
           {% block content_bottom %}

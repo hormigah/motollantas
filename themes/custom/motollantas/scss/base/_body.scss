@@ -1,5 +1,5 @@
 
-*, 
+*,
 *:before, *:after {
 	box-sizing: border-box;
 }
@@ -114,7 +114,7 @@ ol{
 }
 .paragraph--type--mail-information {
   &:before {
-    content: "\f003";    
+    content: "\f003";
   }
   .field--name-field-mail {
     margin-left: map-get($sizes, "half");
@@ -179,7 +179,7 @@ ol{
     border-radius: 100%;
     a {
       background-color: color(background, color-5);
-      color: color(grayscale, white);      
+      color: color(grayscale, white);
       transition: all 0.2s ease;
       border-radius: 100%;
       display: block;
@@ -200,7 +200,7 @@ ol{
       margin: 0 0 3px;
       a {
         color: color(background, color-4);
-      } 
+      }
     }
     .views-field-field-fivestar {
       line-height: 1.25;
@@ -211,7 +211,7 @@ ol{
         position: relative;
       }
     }
-  } 
+  }
 }
 .views-field-price__number {
   font-size: map-get($sizes, "thumb");
@@ -221,7 +221,7 @@ ol{
 .has-glyphicons {
   .select-wrapper {
     &:after {
-      display: none; 
+      display: none;
     }
   }
 }
@@ -300,7 +300,7 @@ ol{
 .product-addtocart {
   .btn {
     &.btn-primary {
-      color: color(grayscale, white);      
+      color: color(grayscale, white);
       background-color: color(background, color-3);
       border-color: color(background, color-3) color(background, color-3) color(background, color-3);
       margin-right: 0;
@@ -310,7 +310,7 @@ ol{
 .button--add-to-cart {
   &.btn {
     &.button--primary {
-      color: color(grayscale, white);      
+      color: color(grayscale, white);
       background-color: color(background, color-3);
       border-color: color(background, color-3) color(background, color-3) color(background, color-3);
       margin-right: 0;
@@ -524,7 +524,7 @@ ol{
     vertical-align: middle;
   }
   .views-field-purchased-entity {
-    
+
   }
 }
 .cart-block--offcanvas-cart-table {
@@ -558,21 +558,13 @@ ol{
   }
 }
 .block-views-blockinformacion-multiple-block-1 {
-  border-top: 1px solid color(grayscale, gray-13);
-  border-bottom: 1px solid color(grayscale, gray-13);
+  border: 1px solid color(grayscale, gray-13);
   background-color: color(background, color-7);
-  width: 100vw;
-  margin-left: 50% !important;
-  transform: translateX(-50vw);
 }
 .view-informacion-multiple {
   .view-row {
-    border-bottom: 1px solid color(grayscale, gray-13);
     padding-top: map-get($sizes, "tiny");
     padding-bottom: map-get($sizes, "tiny");
-    &:first-child {
-      border-left: none;
-    }
     .paragraph--type-titulo-subtitulo-imagen {
       display: flex;
       justify-content: center;
@@ -609,7 +601,7 @@ ol{
   }
   .field--name-body {
     p {
-      
+
     }
   }
   .product-detail-info {
@@ -762,7 +754,7 @@ ol{
     .cart--cart-offcanvas__close {
       .button {
         margin: 10px;
-        padding: 6px 10px;   
+        padding: 6px 10px;
         background-color: color(background, color-11);
         color: color(grayscale, white);
       }
@@ -938,7 +930,7 @@ ol{
     .view-row {
       border-left: 1px solid color(grayscale, gray-13);
     }
-  }  
+  }
   .block-content--type-promociones {
     .bs-region--middle {
       margin-top: 0;
@@ -957,7 +949,7 @@ ol{
     .field--name-dynamic-token-fieldblock-content-image-4 {
       margin-top: 14px;
     }
-  }  
+  }
   .field--name-field-paragraphs-imgtd {
     .fields {
       .fields-wrapper {
@@ -983,3 +975,4 @@ ol{
     }
   }
 }
+

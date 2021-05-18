@@ -665,22 +665,13 @@ ol li:before {
 }
 
 .block-views-blockinformacion-multiple-block-1 {
-  border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
+  border: 1px solid #e1e1e1;
   background-color: #fbfbfb;
-  width: 100vw;
-  margin-left: 50% !important;
-  transform: translateX(-50vw);
 }
 
 .view-informacion-multiple .view-row {
-  border-bottom: 1px solid #e1e1e1;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.view-informacion-multiple .view-row:first-child {
-  border-left: none;
 }
 
 .view-informacion-multiple .view-row .paragraph--type-titulo-subtitulo-imagen {
@@ -1120,12 +1111,12 @@ ol li:before {
 }
 
 .btn.btn-default {
-  background: #7b7b7b;
+  background: #ffc100;
   color: #ffffff;
 }
 
 .btn.btn-default:hover {
-  background: dimgray;
+  background: #dba600;
   transition: all 0.2s ease;
   text-decoration: none;
 }
@@ -1137,7 +1128,7 @@ ol li:before {
 }
 
 .btn.btn-default:active {
-  background: #626161;
+  background: #cc9a00;
 }
 
 .btn.btn-default.disabled, .btn.btn-default:disabled {
@@ -1158,8 +1149,8 @@ ol li:before {
 
 .btn.btn-default.outline {
   background: transparent;
-  color: #7b7b7b;
-  border: 0.13rem solid #7b7b7b;
+  color: #ffc100;
+  border: 0.13rem solid #ffc100;
   box-shadow: none;
 }
 
@@ -1196,13 +1187,13 @@ ol li:before {
 }
 
 .btn.btn-default.outline:hover, .btn.btn-default.outline:active {
-  background: #7b7b7b;
+  background: #ffc100;
   color: #ffffff;
   box-shadow: none;
 }
 
 .btn.btn-default.outline:hover:hover, .btn.btn-default.outline:active:hover {
-  background: dimgray;
+  background: #dba600;
   transition: all 0.2s ease;
   text-decoration: none;
 }
@@ -1214,7 +1205,7 @@ ol li:before {
 }
 
 .btn.btn-default.outline:hover:active, .btn.btn-default.outline:active:active {
-  background: #626161;
+  background: #cc9a00;
 }
 
 .btn.btn-default.outline:hover.disabled, .btn.btn-default.outline:hover:disabled, .btn.btn-default.outline:active.disabled, .btn.btn-default.outline:active:disabled {
@@ -1413,7 +1404,6 @@ input[type="checkbox"] {
   height: 14px;
   width: 14px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
 }
@@ -1477,7 +1467,7 @@ a.text-link.text-primary-base:hover, button.text-link.text-primary-base:hover {
 }
 
 a.text-link.text-secondary-base, button.text-link.text-secondary-base {
-  color: #7b7b7b;
+  color: #ffc100;
 }
 
 a.text-link.text-secondary-base:hover, button.text-link.text-secondary-base:hover {
