@@ -549,7 +549,7 @@ ol li:before {
 
 .cart-form #edit-checkout {
   margin-right: 0;
-  background-color: #65829d;
+  background-color: #ffc100;
   border-color: #65829d #65829d #006699;
   color: #ffffff;
 }
@@ -709,6 +709,23 @@ ol li:before {
 
 .commerce-product .field--name-field-fivestar {
   margin-bottom: 1.25rem;
+}
+
+.commerce-product table th {
+  width: 50%;
+  padding: 5px 0 !important;
+  color: #ffc100;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.commerce-product table td {
+  width: 50%;
+  padding: 5px 0 !important;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
 }
 
 .commerce-product .product-detail-info {
@@ -1018,7 +1035,6 @@ ol li:before {
 }
 
 .main-container .block .block-title .title-line {
-  background-color: #ffffff;
   padding-right: 5px;
 }
 
@@ -1592,7 +1608,6 @@ header.navbar-default .navbar-collapse {
   margin: 0;
   padding: 0;
   background: #252525;
-  border-radius: 5px;
   border-color: transparent;
 }
 

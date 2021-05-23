@@ -451,7 +451,7 @@ ol{
 }
 .cart-form #edit-checkout {
     margin-right: 0;
-    background-color: #65829d;
+    background-color: #ffc100;
     border-color: #65829d #65829d #006699;
     color: #ffffff;
 }
@@ -602,6 +602,23 @@ ol{
   .field--name-body {
     p {
 
+    }
+  }
+  table {
+    th {
+      width: 50%;
+      padding: 5px 0 !important;
+      color: #ffc100;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+    td {
+      width: 50%;
+      padding: 5px 0 !important;
+      line-height: 1.42857143;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
     }
   }
   .product-detail-info {
@@ -881,7 +898,6 @@ ol{
       text-transform: uppercase;
       line-height: 1.1;
       .title-line {
-        background-color: color(grayscale, white);
         padding-right: 5px;
       }
       .line {
