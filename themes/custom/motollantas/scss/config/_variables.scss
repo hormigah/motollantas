@@ -43,7 +43,7 @@ $colors: (
    ),
    grayscale: (
       white    : $grayscaleWhite,
-      gray-1   : $grayscaleLevel-1, 
+      gray-1   : $grayscaleLevel-1,
       gray-2   : $grayscaleLevel-2,
       gray-3   : $grayscaleLevel-3,
       gray-4   : $grayscaleLevel-4,
@@ -60,7 +60,7 @@ $colors: (
       gray-15   : $grayscaleLevel-15,
       gray-16   : $grayscaleLevel-16,
       base     : $grayscaleBase,
-      black    : $grayscaleBlack 
+      black    : $grayscaleBlack
    ),
    border:(
     color-1  : $borderColor-1,
@@ -82,6 +82,7 @@ $colors: (
     color-13  : $backgroundColor-13,
     color-14  : $backgroundColor-14,
     color-15  : $backgroundColor-15,
+    color-16  : $backgroundColor-16,
    )
 );
 

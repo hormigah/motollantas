@@ -301,7 +301,7 @@ ol{
   .btn {
     &.btn-primary {
       color: color(grayscale, white);
-      background-color: color(background, color-3);
+      background-color: color(background, color-13);
       border-color: color(background, color-3) color(background, color-3) color(background, color-3);
       margin-right: 0;
     }
@@ -311,9 +311,12 @@ ol{
   &.btn {
     &.button--primary {
       color: color(grayscale, white);
-      background-color: color(background, color-3);
+      background-color: color(background, color-13);
       border-color: color(background, color-3) color(background, color-3) color(background, color-3);
       margin-right: 0;
+      &:hover {
+        background-color: color(background, color-16);
+      }
     }
   }
 }

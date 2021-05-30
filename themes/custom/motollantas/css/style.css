@@ -403,16 +403,20 @@ ol li:before {
 
 .product-addtocart .btn.btn-primary {
   color: #ffffff;
-  background-color: #65829d;
+  background-color: #ffc100;
   border-color: #65829d #65829d #65829d;
   margin-right: 0;
 }
 
 .button--add-to-cart.btn.button--primary {
   color: #ffffff;
-  background-color: #65829d;
+  background-color: #ffc100;
   border-color: #65829d #65829d #65829d;
   margin-right: 0;
+}
+
+.button--add-to-cart.btn.button--primary:hover {
+  background-color: #dba600;
 }
 
 .fa-shopping-cart {
